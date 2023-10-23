@@ -4,37 +4,37 @@
 
 ### **RF-01**: Base de Datos
 
-      - La base de datos será capaz de mantener una considerable cantidad de lecturas de datos.
-      - Se guardarán todos los datos relacionados con las cajas de pescado, a partir de la trazabilidad de cada lote de pescado.
-      - Deberá registrarse en una base de datos para su posterior consulta y análisis.
+- La base de datos será capaz de mantener una considerable cantidad de lecturas de datos.
+- Se guardarán todos los datos relacionados con las cajas de pescado, a partir de la trazabilidad de cada lote de pescado.
+- Deberá registrarse en una base de datos para su posterior consulta y análisis.
   
 ### **RF-02**: Entradas y salidas
 
-      - Registro de entradas y salidas de producto por medio de la tecnología RFID para mantener un seguimiento automatizado y preciso del inventario en la congeladora.
+- Registro de entradas y salidas de producto por medio de la tecnología RFID para mantener un seguimiento automatizado y preciso del inventario en la congeladora.
 
 ### **RF-03**: Generador de documentación
 
-      - El usuario dispondrá de un generador automatizado de documentación según las reglas de negocio, con el objetivo de respaldar los datos de entradas y salidas. La documentación se guardará en formato digital, pero tendrá que ser posible que se imprima en forma física.
+- El usuario dispondrá de un generador automatizado de documentación según las reglas de negocio, con el objetivo de respaldar los datos de entradas y salidas. La documentación se guardará en formato digital, pero tendrá que ser posible que se imprima en forma física.
 
 ### **RF-04**: Reportes y alertas
 
-      - El usuario dispondrá de un notificador de reportes y alertas que permite obtener información valiosa sobre el estado del almacén, esto para evitar el desperdicio o merma.
+- El usuario dispondrá de un notificador de reportes y alertas que permite obtener información valiosa sobre el estado del almacén, esto para evitar el desperdicio o merma.
 
 ### **RF-05**: Clasificación de datos
 
-      - En nuestro programa, los datos se organizarán de forma específica utilizando el sistema "Lote" como base. La categorización por lotes se basa en la trazabilidad, lo que significa que proporciona detalles sobre cada envío de pescado, incluyendo su origen, el pescador responsable, el método de empaque, etc. 
+- En nuestro programa, los datos se organizarán de forma específica utilizando el sistema "Lote" como base. La categorización por lotes se basa en la trazabilidad, lo que significa que proporciona detalles sobre cada envío de pescado, incluyendo su origen, el pescador responsable, el método de empaque, etc. 
  
 ### **RF-06**: Condiciones ambientales para la tecnología RFID
  
-      - El sistema deberá operar de manera efectiva en condiciones ambientales relevantes para la tecnología RFID, como variaciones de temperatura y humedad.
+- El sistema deberá operar de manera efectiva en condiciones ambientales relevantes para la tecnología RFID, como variaciones de temperatura y humedad.
   
 ### **RF-07**: Implementación de tecnología RFID
 
-      - Con base en investigaciones ambientales previas, se codificarán y probarán los dispositivos con tecnología RFID, tanto chips identificadores como antenas de lectura. Se implementarán los más adecuados para el POC.
+- Con base en investigaciones ambientales previas, se codificarán y probarán los dispositivos con tecnología RFID, tanto chips identificadores como antenas de lectura. Se implementarán los más adecuados para el POC.
       
 ### **RF-08**: UI
 
-      - Se implementará una interfaz funcional que despliegue de manera óptima los cambios en el registro de entradas y salidas.
+- Se implementará una interfaz funcional que despliegue de manera óptima los cambios en el registro de entradas y salidas.
 
 
 ## Requerimientos No Funcionales (RNF)
@@ -43,29 +43,29 @@
 
 ### **RNF-01**: Rendimiento y capacidad del Programa
 
-      - El programa debe someterse a pruebas de rendimiento con el fin de asegurar que pueda gestionar eficazmente la carga de trabajo prevista. Asimismo, la base de datos debe ser capaz de almacenar correctamente las lecturas de las entradas y salidas.
+- El programa debe someterse a pruebas de rendimiento con el fin de asegurar que pueda gestionar eficazmente la carga de trabajo prevista. Asimismo, la base de datos debe ser capaz de almacenar correctamente las lecturas de las entradas y salidas.
 
 ### **RNF-02**: Confiabilidad y precisión de la tegnología RFID
 
-      - La tecnología RFID debe calibrarse adecuadamente para el registro de entrada y salida. De igual manera, la tecnología debe ser rápida y eficiente en cuanto al tiempo de respuesta, así como en la generación de informes.
+- La tecnología RFID debe calibrarse adecuadamente para el registro de entrada y salida. De igual manera, la tecnología debe ser rápida y eficiente en cuanto al tiempo de respuesta, así como en la generación de informes.
       
 ### **RNF-03**: Escalabilidad y Mantenibilidad del POC
     
-      - El sistema debe ser diseñado para ser escalable en futuras implementaciones y el crecimiento del almacén. Además, debe ser mantenible y sostenible a lo largo del ciclo de vida del producto, facilitando su adaptación a cambios y correcciones necesarios para garantizar la escalabilidad.
+- El sistema debe ser diseñado para ser escalable en futuras implementaciones y el crecimiento del almacén. Además, debe ser mantenible y sostenible a lo largo del ciclo de vida del producto, facilitando su adaptación a cambios y correcciones necesarios para garantizar la escalabilidad.
 
 ### **RNF-04**: Seguridad respecto a la información
 
-      - Se deben proporcionar niveles adecuados de seguridad para proteger la información sensible y los datos del cliente, así como prevenir el acceso no autorizado.
+- Se deben proporcionar niveles adecuados de seguridad para proteger la información sensible y los datos del cliente, así como prevenir el acceso no autorizado.
 
 ### **RNF-05**: Diseño de UI
 
-      - Ofrecer una interfaz de usuario amigable y eficiente para que los usuarios puedan interactuar con las funcionalidades de manera intuitiva.
+- Ofrecer una interfaz de usuario amigable y eficiente para que los usuarios puedan interactuar con las funcionalidades de manera intuitiva.
 
 ### Requerimientos de la Organización:
 
 ### **RNF-06**: Reglas de Negocio
 
-      - El sistema se ajustará a las reglas de negocio del cliente y su empresa, utilizando el sistema de inventario "Lote" y cumpliendo con las normas mexicanas e internacionales en cuanto a la documentación.
+- El sistema se ajustará a las reglas de negocio del cliente y su empresa, utilizando el sistema de inventario "Lote" y cumpliendo con las normas mexicanas e internacionales en cuanto a la documentación.
 #
 # **Especificaciones**
 
@@ -134,7 +134,7 @@
 | | Paso 3 - **Validación**: La plantilla resultante se entrega al usuario para su correspondiente verificación. |
 | | Paso 4 - **Guardado e impresión**: El documento validado se guarda en el respaldo de la base de datos, para que el usuario pueda imprimir una copia en papel posteriormente. | 
 | **Excepciones** |  **Acción** |
-| | Paso 1 - **Fallas en la obtencion de datos**: Cuando ocurre, no hay una referencia al lote solicitado. Se consultará directamente con la base de datos. |
+| | Paso 1 - **Fallas en la obtención de datos**: Cuando ocurre, no hay una referencia al lote solicitado. Se consultará directamente con la base de datos. |
 | | Paso 2 - **Fallas en la plantilla**: Puede haber un error de formato en el documento, como un error de encuadre. Se revisará manualmente. |
 | | Paso 3 - **Fallas al momento de guardar**: Puede haber interferencias con la base de datos al guardar un documento de respaldo. Se consultará directamente con la base de datos. |
 | **Postcondición** | Se agilizará un proceso de trabajo para el cliente. |
@@ -162,8 +162,8 @@
 | | Paso 2 - **Fallo en el proceso de generación de alertas**: El sistema debe registrar el error, notificar a los administradores y mostrar un mensaje al usuario informando sobre el problema y la búsqueda de una solución. |
 | | Paso 3 - **Fallo en la entrega de alertas o notificaciones**:  El sistema debe implementar mecanismos de recuperación para intentar reenviar la alerta en caso de un fallo temporal en la entrega. |
 | **Postcondición** | Una vez implementada la funcionalidad de "Reportes y alertas," el cliente estará informado acerca de los productos próximos a caducar, lo que le permitirá tomar decisiones más informadas |
-| **Impacto** | Muy Alto |
-| **Urgencia** | Alta |
+| **Impacto** | Medio |
+| **Urgencia** | Media |
 | **Comentarios** | |
 
 #
@@ -279,7 +279,7 @@
 
 #
 
-| **RNF 02** | **Confiabilidad y precisión de la tegnología RFID** |
+| **RNF 02** | **Confiabilidad y precisión de la tecnología RFID** |
 |---|---|
 | **Versión** | Versión 1.0 |
 | **Autor** | Deco |
