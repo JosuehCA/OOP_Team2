@@ -10,27 +10,27 @@
   
 ### **RF-02**: Entradas y salidas
 
-- Registro de entradas y salidas de producto por medio de la tecnología RFID para mantener un seguimiento automatizado y preciso del inventario en la congeladora.
+- Registro de entradas y salidas de producto por medio de la tecnología RFID para mantener un seguimiento automatizado y preciso del inventario en la conservadora.
 
 ### **RF-03**: Generador de documentación
 
-- El usuario dispondrá de un generador automatizado de documentación según las reglas de negocio, con el objetivo de respaldar los datos de entradas y salidas. La documentación se guardará en formato digital, pero tendrá que ser posible que se imprima en forma física.
+- El usuario dispondrá de un generador automatizado de documentación según las reglas de negocio, con el objetivo de respaldar los datos de entradas y salidas. La documentación se guardará en un formato digital que permita su impresión.
 
 ### **RF-04**: Reportes y alertas
 
-- El usuario dispondrá de un notificador de reportes y alertas que permite obtener información valiosa sobre el estado del almacén, esto para evitar el desperdicio o merma.
+- El usuario dispondrá de un notificador de reportes y alertas que permita obtener información sobre el estado del almacén, esto para disminuir el desperdicio del producto.
 
 ### **RF-05**: Clasificación de datos
 
-- En nuestro programa, los datos se organizarán de forma específica utilizando el sistema "Lote" como base. La categorización por lotes se basa en la trazabilidad, lo que significa que proporciona detalles sobre cada envío de pescado, incluyendo su origen, el pescador responsable, el método de empaque, etc. 
+- Los datos se organizarán de forma específica, utilizando el sistema "Lote" como base. La categorización por lotes se basa en la trazabilidad, lo que significa que proporciona detalles sobre cada envío de producto, incluyendo desde su pesca, el proveedor(pescador), hasta el método y la forma de empaque. 
  
 ### **RF-06**: Condiciones ambientales para la tecnología RFID
  
-- El sistema deberá operar de manera efectiva en condiciones ambientales relevantes para la tecnología RFID, como variaciones de temperatura y humedad.
+- El sistema deberá operar de manera efectiva en condiciones ambientales específicas, tomando en cuenta variaciones de temperatura y de humedad.
   
 ### **RF-07**: Implementación de tecnología RFID
 
-- Con base en investigaciones ambientales previas, se codificarán y probarán los dispositivos con tecnología RFID, tanto chips identificadores como antenas de lectura. Se implementarán los más adecuados para el POC.
+- Con base en investigaciones ambientales previas, se codificarán y probarán los dispositivos con tecnología RFID, tanto chips identificadores(etiquetas) como antenas de lectura. Se implementarán los más adecuados para el POC.
       
 ### **RF-08**: UI
 
@@ -43,19 +43,19 @@
 
 ### **RNF-01**: Rendimiento y capacidad del Programa
 
-- El programa debe someterse a pruebas de rendimiento con el fin de asegurar que pueda gestionar eficazmente la carga de trabajo prevista. Asimismo, la base de datos debe ser capaz de almacenar correctamente las lecturas de las entradas y salidas.
+- El programa debe someterse a pruebas de rendimiento, con el fin de asegurar que pueda gestionar eficazmente la carga de trabajo prevista. Asimismo, la base de datos debe ser capaz de almacenar correctamente las lecturas de entradas y salidas.
 
-### **RNF-02**: Confiabilidad y precisión de la tegnología RFID
+### **RNF-02**: Confiabilidad y precisión de la tecnología RFID
 
-- La tecnología RFID debe calibrarse adecuadamente para el registro de entrada y salida. De igual manera, la tecnología debe ser rápida y eficiente en cuanto al tiempo de respuesta, así como en la generación de informes.
+- La tecnología RFID debe calibrarse adecuadamente para el registro de entradas y salidas. De igual manera, esta tecnología debe ser rápida y eficiente tanto en el tiempo de respuesta como en la generación de informes.
       
 ### **RNF-03**: Escalabilidad y Mantenibilidad del POC
     
-- El sistema debe ser diseñado para ser escalable en futuras implementaciones y el crecimiento del almacén. Además, debe ser mantenible y sostenible a lo largo del ciclo de vida del producto, facilitando su adaptación a cambios y correcciones necesarios para garantizar la escalabilidad.
+- El diseño del sistema debe tomar en cuenta las implementaciones futuras y el crecimiento del almacén. Además, debe ser mantenible y sostenible a lo largo del ciclo de vida del producto, facilitando su adaptación a cambios y correcciones necesarios para garantizar la escalabilidad. 
 
 ### **RNF-04**: Seguridad respecto a la información
 
-- Se deben proporcionar niveles adecuados de seguridad para proteger la información sensible y los datos del cliente, así como prevenir el acceso no autorizado.
+- Se deben proporcionar niveles adecuados de seguridad, que permitan la protección de información sensible (datos del cliente, proveedor, cantidad) y la prevención del acceso no autorizado.
 
 ### **RNF-05**: Diseño de UI
 
@@ -65,7 +65,7 @@
 
 ### **RNF-06**: Reglas de Negocio
 
-- El sistema se ajustará a las reglas de negocio del cliente y su empresa, utilizando el sistema de inventario "Lote" y cumpliendo con las normas mexicanas e internacionales en cuanto a la documentación.
+- El sistema se ajustará a las reglas de negocio del cliente y su empresa, utilizando el sistema de inventario "Lote" y cumpliendo con las normas mexicanas y americanas en cuanto a la documentación.
 #
 # **Especificaciones**
 
@@ -75,18 +75,18 @@
 | --- | --- |
 | **Versión** | Versión 1.0 |
 | **Autor** | Deco |
-| **Requisito** | Infraestructura de hardware y software que pueda gestionar eficazmente la cantidad considerable de lecturas de datos. |
-| **Descripción general** | - La base de datos será capaz de mantener una considerable cantidad de lecturas de datos. - Se guardarán todos los datos relacionados con las cajas de pescado, a partir de la trazabilidad de cada lote de pescado. - Deberán registrarse en una base de datos para su posterior consulta y análisis. |
+| **Requisito** | Infraestructura de hardware y software que gestione eficazmente la cantidad considerable de lecturas de datos. |
+| **Descripción general** | - La base de datos será capaz de mantener una gran cantidad de lecturas de datos. - Se guardarán todos los datos relacionados con las cajas de pescado, a partir de la trazabilidad de cada lote de pescado. - Deberán registrarse en una base de datos para su posterior consulta y análisis. |
 | **Precondición** | Contar con un sistema de recolección de datos. |
 | **Secuencia normal** | **Acción** |
 | | Paso 1 - **Captura de datos**: Se capturan datos del usuario relacionados con las cajas de pescado y la trazabilidad de los lotes de pescado. |
 | | Paso 2 - **Normalización de datos**: Los datos capturados se generalizarán para garantizar que estén en un formato estandarizado y coherente.  |
-| | Paso 3 - **Almacenamiento**: Los datos normalizados se almacenan en la base de datos. |
+| | Paso 3 - **Almacenamiento**: Los datos estandarizados se almacenan en la base de datos. |
 | | Paso 4 - **Seguridad y acceso**: Los datos se resguardan con medidas de seguridad adecuadas. | 
-| | Paso 5 - **Consulta**: Los usuarios autorizados pueden consultar la base de datos para acceder a la información.  |
+| | Paso 5 - **Consulta**: Los usuarios autorizados pueden consultar la base de datos para acceder a la información necesaria.  |
 | | Paso 6 - **Respaldo y recuperación**: Se realizan copias de seguridad regulares de la base de datos. |
 | **Excepciones** |  **Acción** |
-| | Paso 1 - **Fallos en la Captura de Datos**: Se interrumpe el flujo normal de entrada de información. La base de datos notifica de la interrupción.  |
+| | Paso 1 - **Fallos en la Captura de Datos**: Se interrumpe el flujo normal de entrada de información. La base de datos notifica la interrupción.  |
 | | Paso 2 - **Problemas de Normalización**: Los datos capturados pueden ser inconsistentes debido a errores humanos. Esto puede implicar la revisión manual y corrección de los datos. |
 | | Paso 3 - **Fallos de Almacenamiento**: Se lleva a cabo una recuperación de datos por medio de una copia de seguridad. |
 | | Paso 4 - **Acceso No Autorizado**: Esto puede incluir el monitoreo de la seguridad de la base de datos. |
@@ -103,18 +103,18 @@
 | **Versión** | Versión 1.0 |
 | **Autor** | Deco |
 | **Requisito** | Identificador RFID y lector de antena RFID. |
-| **Descripción general** |- Registro de entradas y salidas de producto por medio de la tegnologia RFID, para mantener un seguimiento automatizado y preciso y del inventario en la congeladora. |
+| **Descripción general** |- Registro de entradas y salidas de producto por medio de la tecnologia RFID, que permita mantener un seguimiento automatizado y preciso del inventario en la conservadora. |
 | **Precondición** | Tener calibrada la tecnología RFID |
 | **Secuencia normal** | **Acción** |
-| | Paso 1 - **Etiquetado de productos**: Se colocan las etiquetas RFID en cada lote que se dirige a la congeladora. |
+| | Paso 1 - **Etiquetado de productos**: Se colocan las etiquetas RFID en cada lote que se dirige a la conservadora. |
 | | Paso 2 - **Registro de productos entrantes**: El nuevo lote es escaneado automáticamente por el lector RFID. El lector envía al servidor la hora de entrada y la información del lote. |
 | | Paso 3 - **Registro de productos salientes**: El lote almacenado es escaneado automáticamente por el lector RFID. El lector envía al servidor la hora de salida y la información del lote. |
-| | Paso 4 - **Actualización del inventario**: El sistema mantiene un registro en tiempo real del inventario disponible en la congeladora. | 
+| | Paso 4 - **Actualización del inventario**: El sistema mantiene un registro en tiempo real del inventario disponible en la conservadora. | 
 | **Excepciones** |  **Acción** |
 | | Paso 1 - **Fallo del sistema RFID**: El personal puede necesitar registrar manualmente la entrada o salida y notificar a los encargados de la tecnología para su reparación o mantenimiento. |
 | | Paso 2 - **Tags RFID defectuosos o ausentes**: Puede haber casos en los que las etiquetas RFID estén dañadas, mal colocadas o ausentes en los productos, lo que impide la captura de datos. |
 | | Paso 3 - **Errores de lectura o interferencias**: Pueden ocurrir errores de lectura debido a interferencias electromagnéticas u otros factores que afecten la comunicación entre los lectores RFID y las etiquetas en los productos. |
-| **Postcondición** | El sistema de registro de entradas y salidas mediante la tecnología RFID está operativo y funcional, y se mantiene un seguimiento automatizado y preciso del inventario en la congeladora |
+| **Postcondición** | El sistema de registro de entradas y salidas mediante la tecnología RFID está operativo y funcional, y se mantiene un seguimiento automatizado y preciso del inventario en la conservadora. |
 | **Impacto** | Alto |
 | **Urgencia** | Obligatoria|
 | **Comentarios** | |
@@ -126,11 +126,11 @@
 | **Versión** | Versión 1.0 |
 | **Autor** | Deco |
 | **Requisito** | Definir adecuadamente cada aspecto de la trazabilidad. |
-| **Descripción general** | - El usuario dispondrá de un generador automatizado de documentación según las reglas de negocio, con el objetivo de respaldar los datos de entradas y salidas. La documentación se guardará en formato digital, pero tendrá que ser posible que se imprima en forma física. |
+| **Descripción general** | - El usuario dispondrá de un generador automatizado de documentación según las reglas de negocio, con el objetivo de respaldar los datos de entradas y salidas. La documentación se guardará en formato digital, pero debe que ser posible que se imprima en forma física. |
 | **Precondición** | Tener acceso a la información requerida. |
 | **Secuencia normal** | **Acción** |
 | | Paso 1 - **Obtención de datos**: Se obtienen los datos necesarios de la base de datos, como la información de cada embarque de pescado, su origen, el pescador, la forma de empaque, etc. |
-| | Paso 2 - **Plantilla**: Los datos obtenidos se colocan automáticamente en un documento plantilla que será el reporte de trazabilidad de cada lote. |
+| | Paso 2 - **Plantilla**: Los datos obtenidos se colocan automáticamente en un documento-plantilla que será el reporte de trazabilidad de cada lote. |
 | | Paso 3 - **Validación**: La plantilla resultante se entrega al usuario para su correspondiente verificación. |
 | | Paso 4 - **Guardado e impresión**: El documento validado se guarda en el respaldo de la base de datos, para que el usuario pueda imprimir una copia en papel posteriormente. | 
 | **Excepciones** |  **Acción** |
@@ -138,7 +138,7 @@
 | | Paso 2 - **Fallas en la plantilla**: Puede haber un error de formato en el documento, como un error de encuadre. Se revisará manualmente. |
 | | Paso 3 - **Fallas al momento de guardar**: Puede haber interferencias con la base de datos al guardar un documento de respaldo. Se consultará directamente con la base de datos. |
 | **Postcondición** | Se agilizará un proceso de trabajo para el cliente. |
-| **Impacto** | Muy Alto |
+| **Impacto** | Medio |
 | **Urgencia** | Menor |
 | **Comentarios** | Se tendrán que consultar con el cliente los detalles específicos del proceso de documentación. |
 
@@ -149,7 +149,7 @@
 | **Versión** | Versión 1.0 |
 | **Autor** | Deco |
 | **Requisito** | Definir los tiempos óptimos para la generación de alertas. |
-| **Descripción general** | - El usuario dispondrá de un notificador de reportes y alertas que permite obtener información valiosa sobre el estado del almacén, esto para evitar el desperdicio o merma. |
+| **Descripción general** | - El usuario dispondrá de un notificador de reportes y alertas que permite obtener información valiosa sobre el estado del almacén, esto para evitar el desperdicio del producto. |
 | **Precondición** | Tener en funcionamiento la base de datos, la tecnología RFID y la lógica del programa. |
 | **Secuencia normal** | **Acción** |
 | | Paso 1 - **Inicio de sesión**: El usuario inicia sesión en el sistema con sus credenciales. |
@@ -158,11 +158,11 @@
 | | Paso 4 - **Visualización de información**: El sistema muestra al usuario información detallada sobre el reporte y alerta seleccionada. |
 | | Paso 5 - **Cierre de reporte o alerta**: Después de tomar las acciones requeridas, el usuario puede marcar la alerta o reporte como cerrado. |
 | **Excepciones** |  **Acción** |
-| | Paso 1 - **Fallo en la conexión con la base de datos**: El sistema debe mostrar un mensaje de error al usuario indicando que no se puede acceder a la información. |
-| | Paso 2 - **Fallo en el proceso de generación de alertas**: El sistema debe registrar el error, notificar a los administradores y mostrar un mensaje al usuario informando sobre el problema y la búsqueda de una solución. |
+| | Paso 1 - **Fallo en la conexión con la base de datos**: Se debe mostrar un mensaje de error al usuario indicando que no se puede acceder a la información. |
+| | Paso 2 - **Fallo en el proceso de generación de alertas**: Debe registrarse el error, notificar a los administradores y mostrar un mensaje al usuario informando sobre el problema y la búsqueda de una solución. |
 | | Paso 3 - **Fallo en la entrega de alertas o notificaciones**:  El sistema debe implementar mecanismos de recuperación para intentar reenviar la alerta en caso de un fallo temporal en la entrega. |
 | **Postcondición** | Una vez implementada la funcionalidad de "Reportes y alertas," el cliente estará informado acerca de los productos próximos a caducar, lo que le permitirá tomar decisiones más informadas |
-| **Impacto** | Medio |
+| **Impacto** | Alto |
 | **Urgencia** | Media |
 | **Comentarios** | |
 
