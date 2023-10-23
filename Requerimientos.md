@@ -253,7 +253,7 @@
 | | Paso 1 - **Pérdida de conexión de red**: Comunicar de inmediato al cliente acerca de los problemas técnicos y trabajar en conjunto para resolverlos. |
 | | Paso 2 - **Errores en los datos de trazabilidad**: Se despliegará un mensaje de error que indique la pérdida de conexión y sugiera intentar nuevamente cuando se restablezca la conexión.
 | | Paso 3 - **Datos incorrectos o no válidos**: La interfaz debe resaltar los campos con problemas y mostrar mensajes de error descriptivos. |
-| | Paso 4 - **Error del servidor o de la base de datos**: la interfaz debe mostrar un mensaje de error genérico e informar al usuario que se está trabajando en solucionar el problema. 
+| | Paso 4 - **Error del servidor o de la base de datos**: La interfaz debe mostrar un mensaje de error genérico e informar al usuario que se está trabajando en solucionar el problema. 
 | **Postcondición** | Después de la implementación de la interfaz funcional, el cliente tendrá una mejor experiencia a la hora de agilizar el inventario. |
 | **Impacto** | Alto |
 | **Urgencia** | Baja |
