@@ -5,12 +5,12 @@
 ### **RF-01**: Base de Datos
 
       - La base de datos será capaz de mantener una considerable cantidad de lecturas de datos.
-      - Se guardarán todos los datos relacionados con las cajas de pescado, a partir de la trazabiliadad de cada lote de pescado.
+      - Se guardarán todos los datos relacionados con las cajas de pescado, a partir de la trazabilidad de cada lote de pescado.
       - Deberá registrarse en una base de datos para su posterior consulta y análisis.
   
 ### **RF-02**: Entradas y salidas
 
-      - Registro de entradas y salidas de producto por medio de la tecnología RFID, para mantener un seguimiento automatizado y preciso del inventario en la congeladora.
+      - Registro de entradas y salidas de producto por medio de la tecnología RFID para mantener un seguimiento automatizado y preciso del inventario en la congeladora.
 
 ### **RF-03**: Generador de documentación
 
@@ -137,7 +137,7 @@
 | | Paso 1 - **Fallas en la obtencion de datos**: Cuando ocurre, no hay una referencia al lote solicitado. Se consultará directamente con la base de datos. |
 | | Paso 2 - **Fallas en la plantilla**: Puede haber un error de formato en el documento, como un error de encuadre. Se revisará manualmente. |
 | | Paso 3 - **Fallas al momento de guardar**: Puede haber interferencias con la base de datos al guardar un documento de respaldo. Se consultará directamente con la base de datos. |
-| **Postcondición** | S agilizará un proceso de trabajo para el cliente. |
+| **Postcondición** | Se agilizará un proceso de trabajo para el cliente. |
 | **Impacto** | Muy Alto |
 | **Urgencia** | Menor |
 | **Comentarios** | Se tendrán que consultar con el cliente los detalles específicos del proceso de documentación. |
@@ -168,7 +168,7 @@
 
 #
 
-| **RF 05** | **Clasificación de datos"** |
+| **RF 05** | **Clasificación de datos** |
 | --- | --- |
 | **Versión** | Versión 1.0 |
 | **Autor** | Deco |
@@ -251,7 +251,7 @@
 | | Paso 5 - **Mantenimiento Continuo:**: La interfaz de usuario será monitoreada y mantenida de manera continua para garantizar su funcionamiento óptimo.
 | **Excepciones** |  **Acción** |
 | | Paso 1 - **Pérdida de conexión de red**: Comunicar de inmediato al cliente acerca de los problemas técnicos y trabajar en conjunto para resolverlos. |
-| | Paso 2 - **Errores en los datos de trazabilidad**: Se despliegará un mensaje de error que indique la pérdida de conexión y sugiera intentar nuevamente cuando se restablezca la conexión.
+| | Paso 2 - **Errores en los datos de trazabilidad**: Se desplegará un mensaje de error que indique la pérdida de conexión y sugiera intentar nuevamente cuando se restablezca la conexión.
 | | Paso 3 - **Datos incorrectos o no válidos**: La interfaz debe resaltar los campos con problemas y mostrar mensajes de error descriptivos. |
 | | Paso 4 - **Error del servidor o de la base de datos**: La interfaz debe mostrar un mensaje de error genérico e informar al usuario que se está trabajando en solucionar el problema. 
 | **Postcondición** | Después de la implementación de la interfaz funcional, el cliente tendrá una mejor experiencia a la hora de agilizar el inventario. |
