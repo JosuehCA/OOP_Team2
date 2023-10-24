@@ -173,20 +173,20 @@
 | **Versión** | Versión 1.0 |
 | **Autor** | Deco |
 | **Requisito** | Recopilación de información clasificada en el sistema "Lote". |.
-| **Descripción general** | - En nuestro programa, los datos se organizarán de forma específica utilizando el sistema "Lote" como base. La categorización por lotes se basa en la trazabilidad, lo que significa que proporciona detalles sobre cada envío de pescado, incluyendo su origen, el pescador responsable, el método de empaque, etc. |
-| **Precondición** | Tener implementado el sistema "Lote" en la congeladora y lograr abstraer sus datos. |
+| **Descripción general** | - Los datos se organizarán de forma específica utilizando el sistema "Lote" como base. La categorización por lotes se basa en la trazabilidad, lo que significa que proporciona detalles sobre cada envío de pescado, incluyendo su origen, el pescador responsable, el método de empaque, etc. |
+| **Precondición** | Tener implementado el sistema "Lote" en la conservadora y lograr abstraer sus datos. |
 | **Secuencia normal** | **Acción** |
-| | Paso 1 - **Recolección de Datos de Trazabilidad**: La planta procesa un nuevo lote de pescado y lo deposita en la congeladora. |
+| | Paso 1 - **Recolección de Datos de Trazabilidad**: La planta procesa un nuevo lote de producto y lo deposita en la conservadora. |
 | | Paso 2 - **Asignación de Números de Lote**: Los trabajadores asignan un número de lote al embarque de pescado. |
 | | Paso 3 - **Registro de Datos en el Sistema**: Los trabajadores registran el número de lote asignado a la etiqueta RFID, así como todos sus datos de trazabilidad. |
-| | Paso 4 - **Etiquetado de Lotes**: Se colocan las etiquetas RFID en los lotes de pescados resultantes. |
+| | Paso 4 - **Etiquetado de Lotes**: Se colocan las etiquetas RFID en los lotes de productos resultantes. |
 | | Paso 5 - **Almacenamiento  Seguimiento**: Se almacena físicamente, se detecta por el lector RFID y se hace el seguimiento en tiempo real de la fecha de cada lote, hasta encontrar algún cambio. |
 | **Excepciones** |  **Acción** |
 | | Paso 1 - **Problemas en el sistema "Lote"**: Comunicar de inmediato al cliente acerca de los problemas técnicos y trabajar en conjunto para resolverlos. |
 | | Paso 2 - **Errores en los datos de trazabilidad**: Corregir los datos erróneos, mantener un registro de las correcciones realizadas y asegurarse de que la información correcta se refleje en el etiquetado. |
 | | Paso 3 - **Pérdida de información de trazabilidad**: Notificar de inmediato al cliente y realizar una revisión exhaustiva de los procedimientos para prevenir futuras pérdidas de información. |
 | **Postcondición** | Con la implementación exitosa de esta funcionalidad del POC, la forma de etiquetado y el sistema de respaldo serán mucho más sencillos y versátiles. |
-| **Impacto** | Medio |
+| **Impacto** | Alto |
 | **Urgencia** | Obligatoria |
 | **Comentarios** | |
 
@@ -197,18 +197,18 @@
 | **Versión** | Versión 1.0 |
 | **Autor** | Deco |
 | **Requisito** | Investigación de sistemas de hardware RFID. |.
-| **Descripción general** | - El sistema deberá operar de manera efectiva en condiciones ambientales relevantes para la tecnología RFID, como variaciones de temperatura y humedad. |
+| **Descripción general** | - El sistema deberá operar de manera efectiva en condiciones ambientales relevantes para la tecnología RFID. |
 | **Precondición** | Tener acceso al lector RFID o antena al chip RFID. |
 | **Secuencia normal** | **Acción** |
 | | Paso 1 - **Definición de las condiciones ambientales**: Se identifican las condiciones ambientales que son relevantes para la tecnología RFID. |
 | | Paso 2 - **Selección de componentes y etiquetas RFID adecuadas**: Se seleccionan componentes RFID diseñados para funcionar en las condiciones ambientales identificadas. |
-| | Paso 3 - **Pruebas de campo**: Se llevan a cabo pruebas en un entorno controlado para verificar que los componentes RFID seleccionados funcionen de manera efectiva. 1
+| | Paso 3 - **Pruebas de campo**: Se llevan a cabo pruebas en un entorno controlado para verificar que los componentes RFID funcionen de manera efectiva. |
 | | Paso 4 - **Validación y documentación**: Se valida que el sistema RFID cumple con los requisitos de funcionamiento en condiciones ambientales relevantes y se documentan los resultados de las pruebas. |
 | **Excepciones** |  **Acción** |
 | | Paso 1 - **Extremos de temperatura**: El sistema RFID puede no funcionar de manera efectiva en temperaturas extremadamente altas o bajas. Se investigan nuevas opciones de componentes. |
 | | Paso 2 - **Altos niveles de humedad**:  En condiciones de alta humedad o exposición directa al agua, como en entornos acuáticos o cuando el equipo RFID está constantemente mojado, es posible que el sistema no funcione de manera óptima. |
 | **Postcondición** | Si la investigación es efectiva y se define el tipo de tecnología RFID, se garantiza una implementación exitosa de la tecnología. |
-| **Impacto** | Medio |
+| **Impacto** | Muy Alto |
 | **Urgencia** | Alta |
 | **Comentarios** | |
 
@@ -222,14 +222,14 @@
 | **Descripción general** | - Con base en investigaciones ambientales previas, se codificarán y probarán los dispositivos con tecnología RFID, tanto chips identificadores como antenas de lectura. Se implementarán los más adecuados para el POC. |
 | **Precondición** | La correcta investigación de la tecnología RFID y el cumplimiento del requerimiento RF - 06. |
 | **Secuencia normal** | **Acción** |
-| | Paso 1 - **Codificación de chips identificadored**: Se codificará los chips identificadores con la información necesaria para identificar los objetos o productos en el POC. |
-| | Paso 2 - **Pruebas de dispositivos**: Se realizarán pruebas exhaustivas de los dispositivos RFID seleccionados. |
+| | Paso 1 - **Codificación de chips identificadores**: Se codificarán los identificadores con la información necesaria para identificar los objetos o productos en el POC. |
+| | Paso 2 - **Pruebas de dispositivos**: Se realizarán pruebas de los dispositivos RFID seleccionados. |
 | | Paso 3 - **Instalación de antenas de lectura**: Se instalarán las antenas de lectura en ubicaciones estratégicas dentro del POC. |
 | | Paso 4 - **Configuración del sistema**: Se configurará el sistema de recolección y procesamiento de datos RFID. |
 | | Paso 5 - **Monitoreo y mantenimiento**: Se organizará un programa de monitoreo y mantenimiento continuo. |
 | **Excepciones** |  **Acción** |
 | | Paso 1 - **Problemas con la instalación**: En caso de no ser capaces de instalar el lector RFID o implementar los chips, solicitaremos ayuda externa. |
-| **Postcondición** | Con la exitosa implementación de esta tecnología, estaremos a unos pasos de concluir el POC. |
+| **Postcondición** | Se deberá dar seguimiento del funcionamiento de los dispositivos RFID. |
 | **Impacto** | Alto |
 | **Urgencia** | Alta |
 | **Comentarios** | |
@@ -245,10 +245,10 @@
 | **Precondición** | Tener disponibilidad en la base de datos. |
 | **Secuencia normal** | **Acción** |
 | | Paso 1 - **Diseño de la Interfaz**: Se realizarán dibujos, bocetos y pruebas de diseño para la IU. |
-| | Paso 2 - **Desarrollo de la Interfaz**: Se comienza a programar l interfaz de usuario. |
+| | Paso 2 - **Desarrollo de la Interfaz**: Programación de la interfaz de usuario. |
 | | Paso 3 - **Integración de Datos**:Se conectará la interfaz de usuario a la base de datos, donde contiene las entradas y salidas. |
 | | Paso 4 - **Optimización de Rendimiento**: Si es necesario, se deben realizar ajustes para optimizar el rendimiento de la interfaz. |
-| | Paso 5 - **Mantenimiento Continuo:**: La interfaz de usuario será monitoreada y mantenida de manera continua para garantizar su funcionamiento óptimo.
+| | Paso 5 - **Mantenimiento Continuo:**: La interfaz de usuario será monitoreada y mantenida de manera continua para garantizar su funcionamiento.
 | **Excepciones** |  **Acción** |
 | | Paso 1 - **Pérdida de conexión de red**: Comunicar de inmediato al cliente acerca de los problemas técnicos y trabajar en conjunto para resolverlos. |
 | | Paso 2 - **Errores en los datos de trazabilidad**: Se desplegará un mensaje de error que indique la pérdida de conexión y sugiera intentar nuevamente cuando se restablezca la conexión.
@@ -269,11 +269,11 @@
 |---|---|
 | **Versión** | Versión 1.0 |
 | **Autor** | Deco |
-| **Objetivo** | Garantizar que nuestro POC sea capaz de funcionar de manera eficiente y efectiva en situaciones de uso reales.|
-| **Requisito** | Contar con la primera versión de nuestro programa. |
-| **Descripción** | - El programa debe someterse a pruebas de rendimiento con el fin de asegurar que pueda gestionar eficazmente la carga de trabajo prevista. Asimismo, la base de datos debe ser capaz de almacenar correctamente las lecturas de las entradas y salidas. |
+| **Objetivo** | Garantizar que el sistema sea capaz de funcionar de manera eficiente en situaciones de uso reales.|
+| **Requisito** | Contar con la primera versión del programa. |
+| **Descripción** | - El programa debe someterse a pruebas de rendimiento, con el fin de asegurar que pueda gestionar eficazmente la carga de trabajo prevista. Asimismo, la base de datos debe ser capaz de almacenar correctamente las lecturas de las entradas y salidas. |
 | **Impacto** | Alto |
-| **Urgencia** | Moderada |
+| **Urgencia** | Alta |
 | **Estabilidad** | Alta |
 | **Comentario** |  |
 
@@ -328,7 +328,7 @@
 | **Objetivo** | Diseñar una interfaz de usuario que cumpla con los estándares de usabilidad y accesibilidad, satisfaciendo así al cliente. |
 | **Requisito** | La interfaz de usuario debe cargar y responder de manera rápida, con un tiempo máximo de 2 segundos. |
 | **Descripción** |- Ofrecer una interfaz de usuario amigable y eficiente para que los usuarios puedan interactuar con las funcionalidades de manera intuitiva. |
-| **Impacto** | Muy Alto |
+| **Impacto** | Medio |
 | **Urgencia** | Baja |
 | **Estabilidad** | Baja |
 | **Comentario** |  |
@@ -339,9 +339,9 @@
 |---|---|
 | **Versión** | Versión 1.0 |
 | **Autor** | Deco |
-| **Objetivo** | Garantizar que el POC cumple con un 100% de precisión en el sistema "Lote" de acuerdo a las reglas de negocio del cliente y las normas que lo rigen. |
+| **Objetivo** | Garantizar que el POC cumple con un 100% de precisión en el sistema "Lote" de acuerdo con las reglas de negocio del cliente y las normas que lo rigen. |
 | **Requisito** | La interfaz de usuario debe cargar y responder de manera rápida, con un tiempo máximo de 2 segundos. |
-| **Descripción** | - El sistema se ajustará a las reglas de negocio del cliente y su empresa, utilizando el sistema de inventario "Lote" y cumpliendo con las normas mexicanas e internacionales en cuanto a la documentación. |
+| **Descripción** | - El sistema se ajustará a las reglas de negocio del cliente y su empresa, utilizando el sistema de inventario "Lote" y cumpliendo con las normas tanto mexicanas como americanas en cuanto a la documentación. |
 | **Impacto** | Alto |
 | **Urgencia** | Moderada |
 | **Estabilidad** | Alta |
