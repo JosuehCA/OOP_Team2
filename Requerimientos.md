@@ -163,7 +163,7 @@
 | | Paso 3 - **Fallo en la entrega de alertas o notificaciones**:  El sistema debe implementar mecanismos de recuperación para intentar reenviar la alerta en caso de un fallo temporal en la entrega. |
 | **Postcondición** | Una vez implementada la funcionalidad de "Reportes y alertas," el cliente estará informado acerca de los productos próximos a caducar, lo que le permitirá tomar decisiones más informadas |
 | **Impacto** | Alto |
-| **Urgencia** | Media |
+| **Urgencia** | Menor |
 | **Comentarios** | |
 
 #
