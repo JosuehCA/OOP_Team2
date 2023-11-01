@@ -3,10 +3,19 @@
 Sistema automatizado de entradas y salidas, diseñado para gestionar el inventario de una conservadora de productos perecederos, mediante la implementación de tecnología RFID. El sistema permite un control preciso y una gestión optimizada de los productos almacenados en una base de datos, lo que permitirá la verificación de la fecha de entrada, el proveedor del producto, el lote asignado, la(s) especie(s) del producto y la fecha de salida del mismo.
 
 ## **Objetivos del Producto**
-        -
-        -
-        -
-        -
+- Optimización de la gestión de inventario.
+
+- Control preciso del inventario.
+
+- Minimización de pérdidas de producto.
+
+- Facilitar la trazabilidad y documentación. (la documentación no la incluí en el pitch pq aún estamos viendo)
+
+- Ahorro en tiempo y costos.
+
+- Mejora en la toma de decisiones en productos perecederos.
+
+- Mejora de la satisfacción del cliente.
 
 ## **Alcance**
 
