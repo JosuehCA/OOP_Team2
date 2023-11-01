@@ -9,7 +9,7 @@ Sistema automatizado de entradas y salidas, diseñado para gestionar el inventar
 
 - Minimización de pérdidas de producto.
 
-- Facilitar la trazabilidad y documentación. (la documentación no la incluí en el pitch pq aún estamos viendo)
+- Facilitar la trazabilidad y documentación.
 
 - Ahorro en tiempo y costos.
 
