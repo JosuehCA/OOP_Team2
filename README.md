@@ -1,8 +1,10 @@
 # Programación Orientada a Objetos - Equipo #2
-## Sistema de Inventario de Productos Perecederos
+## Sistema de Inventario de Productos Perecederos - SeafoodTrace
 
 Enfocado a tecnología RFID para implementación de optimizaciones
 Liga del proyecto en GitHub: <https://github.com/users/JosuehCA/projects/1>
+
+![Logo](https://github.com/JosuehCA/OOP_Team2/blob/JohanAguilar/images/SeafoodTrace.png)
 
 ### Contenido
 - [Descripción del Producto](#producto)
