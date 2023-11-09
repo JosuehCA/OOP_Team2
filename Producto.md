@@ -45,4 +45,4 @@ Se identificó que el proceso de gestión dentro de la conservadora se efectúa 
 
 ## **¿Por qué se podría considerar de valor la propuesta?**
 
-Se considera de alto valor dicha propuesta, ya que trae consigo diversos beneficios, tales como una menor carga de trabajo para los trabajadores enfocados en el área de la conservadora y administración, una mejor eficiencia en los procesos, mayor control en los productos de la conservadora y, sobre todo, el aumento de las ganancias y la reducción de despercidios. 
+Se considera de alto valor dicha propuesta, ya que trae consigo diversos beneficios, tales como una menor carga de trabajo para los trabajadores enfocados en el área de la conservadora y administración, una mejor eficiencia en los procesos, mayor control en los productos de la conservadora y, sobre todo, el aumento de las ganancias y la reducción de desperdicios. 
