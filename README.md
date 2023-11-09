@@ -6,11 +6,14 @@ Liga del proyecto en GitHub: <https://github.com/users/JosuehCA/projects/1>
 
 ![Logo](https://github.com/JosuehCA/OOP_Team2/blob/JohanAguilar/images/SeafoodTrace.png)
 
-### Contenido
-- [Descripción del Producto](#producto)
-- [Propuesta de Valor](#propuesta)
-- [Proceso de Abstracción](#abstraccion)
-- [Priorización](#priorizacion)
+### Contenido del Repositorio
+- [Descripción del Producto](https://github.com/JosuehCA/OOP_Team2/blob/JohanAguilar/Documentaci%C3%B3n/Producto.md#descripción-del-producto)
+- [Alcance](https://github.com/JosuehCA/OOP_Team2/blob/JohanAguilar/Documentaci%C3%B3n/Producto.md##alcance)
+- [Limitaciones del Proyecto](https://github.com/JosuehCA/OOP_Team2/blob/JohanAguilar/Documentaci%C3%B3n/Producto.md##limitaciones)
+- [Propuesta de Valor](https://github.com/JosuehCA/OOP_Team2/blob/JohanAguilar/Documentaci%C3%B3n/Producto.md#propuesta-de-valor)
+- [Proceso de Abstracción](https://github.com/JosuehCA/OOP_Team2/blob/JohanAguilar/Documentaci%C3%B3n/Proceso_Abstracci%C3%B3n.md)
+- [Priorización y Artefactos](https://github.com/JosuehCA/OOP_Team2/blob/JohanAguilar/Documentaci%C3%B3n/Priorizaci%C3%B3n_Artefactos.md)
+- [Bitácoras](https://github.com/JosuehCA/OOP_Team2/blob/JohanAguilar/Documentaci%C3%B3n/Bitacora_Reuniones.md)
 
 
 
