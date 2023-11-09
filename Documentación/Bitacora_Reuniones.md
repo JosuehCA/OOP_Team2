@@ -1,5 +1,4 @@
 # Bitácora de Reuniones
-
 En este apartado, se registra un resumen de las reuniones más relevantes que han tenido lugar.
 
 #
