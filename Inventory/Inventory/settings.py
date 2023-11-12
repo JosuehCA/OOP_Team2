@@ -77,10 +77,10 @@ WSGI_APPLICATION = 'Inventory.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',  #.mysql for MySQL
-        'HOST': '127.0.0.1',  # Public IP address
-        'NAME': 'mysqldb',  # Replace with actual database name. Could be a file
+        'HOST': 'localhost',  # Public IP address
+        'NAME': 'product_db',  # Replace with actual database name. Could be a file
         'USER': 'root',  # Replace with actual username
-        'PASSWORD': 'testpass',  # Replace with actual password
+        'PASSWORD': 'Thisisacomplexpassword1',  # Replace with actual password
         'PORT': '3306',  # Default PostgreSQL port (5432); use '3306' for MySQL
     }
 }
