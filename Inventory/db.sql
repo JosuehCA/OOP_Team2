@@ -7,7 +7,7 @@ CREATE TABLE IF NOT EXISTS table_inventory (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
     RFID BIGINT NOT NULL,
-    weight DECIMAL(10, 2) NOT NULL
+    weight DECIMAL(10, 2) NOT NULL      -- Esta tabla no se utiliza con Django
 );
 
 SHOW tables;    -- Muestra las tablas

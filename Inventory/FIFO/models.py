@@ -1,5 +1,6 @@
 from django.contrib.auth.models import AbstractUser
 from django.db import models
+
 #from django.utils import timezone
 
 # Create your models here.
@@ -29,7 +30,7 @@ class Product(models.Model):
     expiryDate = models.DateField()
 
     def __str__(self):
-        return f"{self.Name}"
+        return f"{self.name}"
     
 class Inventory(models.Model):
     capacity = models.PositiveIntegerField()

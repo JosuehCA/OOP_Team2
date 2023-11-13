@@ -1,0 +1,9 @@
+{% extends "FIFO/layout.html" %}
+
+{% block body %}
+    <form action="{% url 'index' %}" method="POST">
+        {% csrf_token %}
+        {{ new_product }}
+        <input type="submit">
+    </form>
+{% endblock %}
