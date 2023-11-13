@@ -2,10 +2,10 @@
 
 | **Integrante** | **Actividad** | **Puntaje** | **Total de participación** |
 |:---:|:---:|:---:|:---:|
-| Josueh Cabrera | Grabación del Pitch<br>Configuraciones iniciales del código<br>Creación de la base de datos y enlace con el proyecto | 1<br>2<br>1 | 25% |
-| Johan Aguilar | Definición del Diagrama de Clases<br>Elaboración de la presentación del pitch | 2<br>2 | 25% |
-| Deco Acierno | Definición de Requisitos Funcionales<br>Definición de Requisitos No Funcionales | 2<br>2 | 25% |
-| Ricardo Cordova | Redacción de la bitácora de actividades<br>Definición del Diagrama de Casos de Uso | 2<br>2 | 25% |
+| Josueh Cabrera | Grabación de presentaciones<br>Definición de modelos/clases dentro del código<br>Funciones de login,logout, añadir y eliminar productos dentro del controlador | 1<br>1<br>3 | 25% |
+| Johan Aguilar | Definición del Diagrama de Clases<br>Elaboración de la presentación del pitch<br>Actualización de documentación | 2<br>2<br>1 | 25% |
+| Deco Acierno | Definición de Requisitos Funcionales<br>Definición de Requisitos No Funcionales<br>Definición de competencias genéricas | 2<br>2<br>1 | 25% |
+| Ricardo Cordova | Redacción de la bitácora de actividades<br>Definición del Diagrama de Casos de Uso<br>Definición de competencias específicas | 2<br>2<br>1 | 25% |
 
 
 ### Las evidencias se encuentran en los commits de cada branch
