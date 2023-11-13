@@ -13,17 +13,12 @@ class new_entry(forms.Form):
     WEIGHT = forms.FloatField()
     EXPIRY_DATE = forms.DateField(required=False)
 
-# Create your views here.  Pseudo-controller
+# Create your views here.  Controller
 def index(request):
     if request.method == "POST":
-        if request.POST["Delete"]:
+        if request.POST.get("Delete"):
             product_to_delete = Product.objects.get(pk=request.POST.get("product_id"))
             product_to_delete.delete()
-        elif request.POST["Edit"]:
-            product_to_edit = Product.objects.get(pk=request.POST.get("product_id"))
-            return render(request, "FIFO/add.html", {
-                "product" : product_to_edit
-            })
         else:
             product = Product(
             name=request.POST["Name"],
@@ -89,11 +84,6 @@ def register(request):
     
 def add(request):
     product = new_entry
-    if request.method == "POST":
-
-        return render(request, "FIFO/add.html", {
-
-        })
     return render(request, "FIFO/add.html", {
         "new_product": product
     })
