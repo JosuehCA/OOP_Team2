@@ -6,7 +6,7 @@ from django.urls import reverse
 
 from . models import User
 
-# Create your views here.
+# Create your views here.  Pseudo-controller
 def index(request):
     return render(request, "FIFO/index.html")
 
