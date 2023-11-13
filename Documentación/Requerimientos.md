@@ -12,30 +12,17 @@
 
 - Registro de entradas y salidas de producto por medio de la tecnología RFID para mantener un seguimiento automatizado y preciso del inventario en la conservadora.
 
-### **RF-03**: Generador de documentación
-
-- El usuario dispondrá de un generador automatizado de documentación según las reglas de negocio, con el objetivo de respaldar los datos de entradas y salidas. La documentación se guardará en un formato digital que permita su impresión.
-
-### **RF-04**: Reportes y alertas
+### **RF-03**: Reportes y alertas
 
 - El usuario dispondrá de un notificador de reportes y alertas que permita obtener información sobre el estado del almacén, esto para disminuir el desperdicio del producto.
-
-### **RF-05**: Clasificación de datos
-
-- Los datos se organizarán de forma específica, utilizando el sistema "Lote" como base. La categorización por lotes se basa en la trazabilidad, lo que significa que proporciona detalles sobre cada envío de producto, incluyendo desde su pesca, el proveedor(pescador), hasta el método y la forma de empaque. 
- 
-### **RF-06**: Condiciones ambientales para la tecnología RFID
- 
-- El sistema deberá operar de manera efectiva en condiciones ambientales específicas, tomando en cuenta variaciones de temperatura y de humedad.
   
-### **RF-07**: Implementación de tecnología RFID
+### **RF-04**: Implementación de tecnología RFID
 
 - Con base en investigaciones ambientales previas, se codificarán y probarán los dispositivos con tecnología RFID, tanto chips identificadores(etiquetas) como antenas de lectura. Se implementarán los más adecuados para el POC.
       
-### **RF-08**: UI
+### **RF-05**: UI
 
 - Se implementará una interfaz funcional que despliegue de manera óptima los cambios en el registro de entradas y salidas.
-
 
 ## Requerimientos No Funcionales (RNF)
 
@@ -61,12 +48,6 @@
 
 - Ofrecer una interfaz de usuario amigable y eficiente para que los usuarios puedan interactuar con las funcionalidades de manera intuitiva.
 
-### Requerimientos de la Organización:
-
-### **RNF-06**: Reglas de Negocio
-
-- El sistema se ajustará a las reglas de negocio del cliente y su empresa, utilizando el sistema de inventario "Lote" y cumpliendo con las normas mexicanas y americanas en cuanto a la documentación.
-#
 # **Especificaciones**
 
 ## **Especificación de RF**
@@ -121,30 +102,7 @@
 
 #
 
-| **RF 03** | **Generador de documentación** |
-| --- | --- |
-| **Versión** | Versión 1.0 |
-| **Autor** | Deco |
-| **Requisito** | Definir adecuadamente cada aspecto de la trazabilidad. |
-| **Descripción general** | - El usuario dispondrá de un generador automatizado de documentación según las reglas de negocio, con el objetivo de respaldar los datos de entradas y salidas. La documentación se guardará en formato digital, pero debe que ser posible que se imprima en forma física. |
-| **Precondición** | Tener acceso a la información requerida. |
-| **Secuencia normal** | **Acción** |
-| | Paso 1 - **Obtención de datos**: Se obtienen los datos necesarios de la base de datos, como la información de cada embarque de pescado, su origen, el pescador, la forma de empaque, etc. |
-| | Paso 2 - **Plantilla**: Los datos obtenidos se colocan automáticamente en un documento-plantilla que será el reporte de trazabilidad de cada lote. |
-| | Paso 3 - **Validación**: La plantilla resultante se entrega al usuario para su correspondiente verificación. |
-| | Paso 4 - **Guardado e impresión**: El documento validado se guarda en el respaldo de la base de datos, para que el usuario pueda imprimir una copia en papel posteriormente. | 
-| **Excepciones** |  **Acción** |
-| | Paso 1 - **Fallas en la obtención de datos**: Cuando ocurre, no hay una referencia al lote solicitado. Se consultará directamente con la base de datos. |
-| | Paso 2 - **Fallas en la plantilla**: Puede haber un error de formato en el documento, como un error de encuadre. Se revisará manualmente. |
-| | Paso 3 - **Fallas al momento de guardar**: Puede haber interferencias con la base de datos al guardar un documento de respaldo. Se consultará directamente con la base de datos. |
-| **Postcondición** | Se agilizará un proceso de trabajo para el cliente. |
-| **Impacto** | Medio |
-| **Urgencia** | Menor |
-| **Comentarios** | Se tendrán que consultar con el cliente los detalles específicos del proceso de documentación. |
-
-#
-
-| **RF 04** | **Reportes y alertas** |
+| **RF 03** | **Reportes y alertas** |
 | --- | --- |
 | **Versión** | Versión 1.0 |
 | **Autor** | Deco |
@@ -168,53 +126,7 @@
 
 #
 
-| **RF 05** | **Clasificación de datos** |
-| --- | --- |
-| **Versión** | Versión 1.0 |
-| **Autor** | Deco |
-| **Requisito** | Recopilación de información clasificada en el sistema "Lote". |.
-| **Descripción general** | - Los datos se organizarán de forma específica utilizando el sistema "Lote" como base. La categorización por lotes se basa en la trazabilidad, lo que significa que proporciona detalles sobre cada envío de pescado, incluyendo su origen, el pescador responsable, el método de empaque, etc. |
-| **Precondición** | Tener implementado el sistema "Lote" en la conservadora y lograr abstraer sus datos. |
-| **Secuencia normal** | **Acción** |
-| | Paso 1 - **Recolección de Datos de Trazabilidad**: La planta procesa un nuevo lote de producto y lo deposita en la conservadora. |
-| | Paso 2 - **Asignación de Números de Lote**: Los trabajadores asignan un número de lote al embarque de pescado. |
-| | Paso 3 - **Registro de Datos en el Sistema**: Los trabajadores registran el número de lote asignado a la etiqueta RFID, así como todos sus datos de trazabilidad. |
-| | Paso 4 - **Etiquetado de Lotes**: Se colocan las etiquetas RFID en los lotes de productos resultantes. |
-| | Paso 5 - **Almacenamiento  Seguimiento**: Se almacena físicamente, se detecta por el lector RFID y se hace el seguimiento en tiempo real de la fecha de cada lote, hasta encontrar algún cambio. |
-| **Excepciones** |  **Acción** |
-| | Paso 1 - **Problemas en el sistema "Lote"**: Comunicar de inmediato al cliente acerca de los problemas técnicos y trabajar en conjunto para resolverlos. |
-| | Paso 2 - **Errores en los datos de trazabilidad**: Corregir los datos erróneos, mantener un registro de las correcciones realizadas y asegurarse de que la información correcta se refleje en el etiquetado. |
-| | Paso 3 - **Pérdida de información de trazabilidad**: Notificar de inmediato al cliente y realizar una revisión exhaustiva de los procedimientos para prevenir futuras pérdidas de información. |
-| **Postcondición** | Con la implementación exitosa de esta funcionalidad del POC, la forma de etiquetado y el sistema de respaldo serán mucho más sencillos y versátiles. |
-| **Impacto** | Alto |
-| **Urgencia** | Obligatoria |
-| **Comentarios** | |
-
-#
-
-| **RF 06** | **Condiciones ambientales para la tecnología RFID** |
-| --- | --- |
-| **Versión** | Versión 1.0 |
-| **Autor** | Deco |
-| **Requisito** | Investigación de sistemas de hardware RFID. |.
-| **Descripción general** | - El sistema deberá operar de manera efectiva en condiciones ambientales relevantes para la tecnología RFID. |
-| **Precondición** | Tener acceso al lector RFID o antena al chip RFID. |
-| **Secuencia normal** | **Acción** |
-| | Paso 1 - **Definición de las condiciones ambientales**: Se identifican las condiciones ambientales que son relevantes para la tecnología RFID. |
-| | Paso 2 - **Selección de componentes y etiquetas RFID adecuadas**: Se seleccionan componentes RFID diseñados para funcionar en las condiciones ambientales identificadas. |
-| | Paso 3 - **Pruebas de campo**: Se llevan a cabo pruebas en un entorno controlado para verificar que los componentes RFID funcionen de manera efectiva. |
-| | Paso 4 - **Validación y documentación**: Se valida que el sistema RFID cumple con los requisitos de funcionamiento en condiciones ambientales relevantes y se documentan los resultados de las pruebas. |
-| **Excepciones** |  **Acción** |
-| | Paso 1 - **Extremos de temperatura**: El sistema RFID puede no funcionar de manera efectiva en temperaturas extremadamente altas o bajas. Se investigan nuevas opciones de componentes. |
-| | Paso 2 - **Altos niveles de humedad**:  En condiciones de alta humedad o exposición directa al agua, como en entornos acuáticos o cuando el equipo RFID está constantemente mojado, es posible que el sistema no funcione de manera óptima. |
-| **Postcondición** | Si la investigación es efectiva y se define el tipo de tecnología RFID, se garantiza una implementación exitosa de la tecnología. |
-| **Impacto** | Muy Alto |
-| **Urgencia** | Alta |
-| **Comentarios** | |
-
-#
-
-| **RF 07** | **Implementación de tecnología RFID** |
+| **RF 04** | **Implementación de tecnología RFID** |
 | --- | --- |
 | **Versión** | Versión 1.0 |
 | **Autor** | Deco |
@@ -236,7 +148,7 @@
 
 #
 
-| **RF 08** | **UI** |
+| **RF 05** | **UI** |
 | --- | --- |
 | **Versión** | Versión 1.0 |
 | **Autor** | Deco |
@@ -260,8 +172,6 @@
 | **Comentarios** | |
 
 #
-
-
 
 ## **Especificación de RNF**
 
@@ -331,18 +241,4 @@
 | **Impacto** | Medio |
 | **Urgencia** | Baja |
 | **Estabilidad** | Baja |
-| **Comentario** |  |
-
-#
-
-| **RNF 06** | **Reglas de Negocio** |
-|---|---|
-| **Versión** | Versión 1.0 |
-| **Autor** | Deco |
-| **Objetivo** | Garantizar que el POC cumple con un 100% de precisión en el sistema "Lote" de acuerdo con las reglas de negocio del cliente y las normas que lo rigen. |
-| **Requisito** | La interfaz de usuario debe cargar y responder de manera rápida, con un tiempo máximo de 2 segundos. |
-| **Descripción** | - El sistema se ajustará a las reglas de negocio del cliente y su empresa, utilizando el sistema de inventario "Lote" y cumpliendo con las normas tanto mexicanas como americanas en cuanto a la documentación. |
-| **Impacto** | Alto |
-| **Urgencia** | Moderada |
-| **Estabilidad** | Alta |
 | **Comentario** |  |
