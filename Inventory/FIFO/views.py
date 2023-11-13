@@ -3,12 +3,33 @@ from django.db import IntegrityError
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
 from django.urls import reverse
+from django import forms
 
-from . models import User
+from . models import User, Product
 
-# Create your views here.
+class new_entry(forms.Form):
+    Name = forms.CharField(max_length=45)  
+    RFID = forms.CharField(max_length=45)
+    WEIGHT = forms.FloatField()
+    EXPIRY_DATE = forms.DateField(required=False)
+
+# Create your views here.  Controller
 def index(request):
-    return render(request, "FIFO/index.html")
+    if request.method == "POST":
+        if request.POST.get("Delete"):
+            product_to_delete = Product.objects.get(pk=request.POST.get("product_id"))
+            product_to_delete.delete()
+        else:
+            product = Product(
+            name=request.POST["Name"],
+            rfid = request.POST["RFID"],
+            weight = request.POST["WEIGHT"],
+            expiryDate = request.POST["EXPIRY_DATE"])
+
+            product.save()
+    return render(request, "FIFO/index.html", {
+        "products": Product.objects.all()
+    })
 
 def login_view(request):
     if request.method == "POST":
@@ -60,3 +81,9 @@ def register(request):
         return HttpResponseRedirect(reverse("index"))
     else:
         return render(request, "FIFO/register.html")
+    
+def add(request):
+    product = new_entry
+    return render(request, "FIFO/add.html", {
+        "new_product": product
+    })

@@ -1,5 +1,24 @@
 {% extends 'FIFO/layout.html' %}
 
 {% block body %}
-    <h1>Hola</h1>
+    <h1>Products</h1>
+    <a href="{% url 'add' %}" style="text-decoration: none; font-family: sans-serif;">Add a new product</a>
+
+    <h2>Registered products:</h2>
+    {% if not products %}
+        <p>No products</p>
+    {% else %}
+        {% for product in products %}
+            <form action="{% url 'index' %}" method="POST">
+                {% csrf_token %}
+                <h3>Name:{{product.name}}</h3>
+                <h3>RFID:{{product.rfid}}</h3>
+                <h3>Weight: {{product.weight}}</h3>
+                <h3>Entry date:{{product.entryDate}}</h3>
+                <h3>Expiry date:{{product.expiryDate}}</h3>
+                <input type="hidden" value="{{ product.id }}" name="product_id">
+                <input type="submit" value="Delete" name="Delete">
+            </form>
+        {% endfor %}
+    {% endif %}
 {% endblock %}
