@@ -12,7 +12,6 @@
 
 - Registro de entradas y salidas de producto por medio de la tecnología RFID para mantener un seguimiento automatizado y preciso del inventario en la conservadora.
 
-
 ### **RF-03**: Reportes y alertas
 
 - El usuario dispondrá de un notificador de reportes y alertas que permita obtener información sobre el estado del almacén, esto para disminuir el desperdicio del producto.
@@ -24,7 +23,6 @@
 ### **RF-05**: UI
 
 - Se implementará una interfaz funcional que despliegue de manera óptima los cambios en el registro de entradas y salidas.
-
 
 ## Requerimientos No Funcionales (RNF)
 
@@ -50,7 +48,6 @@
 
 - Ofrecer una interfaz de usuario amigable y eficiente para que los usuarios puedan interactuar con las funcionalidades de manera intuitiva.
 
-#
 # **Especificaciones**
 
 ## **Especificación de RF**
@@ -103,6 +100,7 @@
 | **Urgencia** | Obligatoria|
 | **Comentarios** | |
 
+#
 
 | **RF 03** | **Reportes y alertas** |
 | --- | --- |
@@ -174,8 +172,6 @@
 | **Comentarios** | |
 
 #
-
-
 
 ## **Especificación de RNF**
 
