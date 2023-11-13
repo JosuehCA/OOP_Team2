@@ -16,13 +16,25 @@ class new_entry(forms.Form):
 # Create your views here.  Pseudo-controller
 def index(request):
     if request.method == "POST":
-        product = Product(
+        if request.POST["Delete"]:
+            product_to_delete = Product.objects.get(pk=request.POST.get("product_id"))
+            product_to_delete.delete()
+        elif request.POST["Edit"]:
+            product_to_edit = Product.objects.get(pk=request.POST.get("product_id"))
+            return render(request, "FIFO/add.html", {
+                "product" : product_to_edit
+            })
+        else:
+            product = Product(
             name=request.POST["Name"],
             rfid = request.POST["RFID"],
             weight = request.POST["WEIGHT"],
             expiryDate = request.POST["EXPIRY_DATE"])
-        product.save()
-    return render(request, "FIFO/index.html")
+
+            product.save()
+    return render(request, "FIFO/index.html", {
+        "products": Product.objects.all()
+    })
 
 def login_view(request):
     if request.method == "POST":
@@ -77,6 +89,11 @@ def register(request):
     
 def add(request):
     product = new_entry
+    if request.method == "POST":
+
+        return render(request, "FIFO/add.html", {
+
+        })
     return render(request, "FIFO/add.html", {
         "new_product": product
     })
