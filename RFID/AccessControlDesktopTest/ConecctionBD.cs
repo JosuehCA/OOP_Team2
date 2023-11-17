@@ -1,8 +1,3 @@
-﻿
-// ---------------------------------------------------------------- RFID ----------------------------------------------------------------  
-using ReaderB;
-using RawInput_dll;
-
 // ---------------------------------------------------------------- SQL ----------------------------------------------------------------     
 
 using System;
@@ -18,7 +13,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
-
+//Conexión directa entre la tarjeta CF-RU5102 y BD
 namespace RFID
 
 {
@@ -74,11 +69,6 @@ namespace RFID
     }
 }
 
-// ---------------------------------------------------------------- RFID ----------------------------------------------------------------  
-
-//Cyclic Rudendancy Check (CRC)
-
-//Funciones RRU1861 a utiliziar 
 
 
 
