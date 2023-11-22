@@ -1,0 +1,10 @@
+C:\Users\usuario\OneDrive\Escritorio\ControlDesktoAppConsol\bin\Debug\ControlDesktoAppConsol.exe.config
+C:\Users\usuario\OneDrive\Escritorio\ControlDesktoAppConsol\bin\Debug\ControlDesktoAppConsol.exe
+C:\Users\usuario\OneDrive\Escritorio\ControlDesktoAppConsol\bin\Debug\ControlDesktoAppConsol.pdb
+C:\Users\usuario\OneDrive\Escritorio\ControlDesktoAppConsol\bin\Debug\RawInput.dll
+C:\Users\usuario\OneDrive\Escritorio\ControlDesktoAppConsol\bin\Debug\UHFReader18CSharp.dll
+C:\Users\usuario\OneDrive\Escritorio\ControlDesktoAppConsol\obj\Debug\ControlDesktoAppConsol.csproj.AssemblyReference.cache
+C:\Users\usuario\OneDrive\Escritorio\ControlDesktoAppConsol\obj\Debug\ControlDesktoAppConsol.csproj.CoreCompileInputs.cache
+C:\Users\usuario\OneDrive\Escritorio\ControlDesktoAppConsol\obj\Debug\ControlDesktoAppConsol.csproj.CopyComplete
+C:\Users\usuario\OneDrive\Escritorio\ControlDesktoAppConsol\obj\Debug\ControlDesktoAppConsol.exe
+C:\Users\usuario\OneDrive\Escritorio\ControlDesktoAppConsol\obj\Debug\ControlDesktoAppConsol.pdb
