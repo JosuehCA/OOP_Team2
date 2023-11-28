@@ -4,7 +4,7 @@
 
 En el diagrama siguiente, se ilustra cómo los usuarios, en particular el Administrador y el Empleado, pueden interactuar con el sistema. Además, se representan los diversos procesos que se ejecutan a lo largo del sistema, como la gestión de información, la generación de documentos útiles y la implementación del concepto CRUD, que engloba las operaciones de Crear, Leer, Actualizar y Borrar en una base de datos.
 
-![Casos de Uso](https://github.com/JosuehCA/OOP_Team2/blob/JohanAguilar/images/CasosdeUso.jpg)
+![Casos de Uso](https://github.com/JosuehCA/OOP_Team2/blob/PrimeraRevision/images/CasosdeUso.jpg)
 
 ## **Historias de Usuario**
 
