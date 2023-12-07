@@ -23,6 +23,9 @@ public class Product {
    private String name;
    @Column(name = "weight")
    private float weight;
+   @Column(name = "Quantity")
+   @GeneratedValue(strategy = GenerationType.AUTO)
+   private int quantity;
    @Column(name= "entry_date")
    @CreationTimestamp      // Sets the field value to the current timestamp when the entity is first saved
    @DateTimeFormat(pattern = "dd-MM-yyyy HH:mm")
@@ -54,6 +57,12 @@ public class Product {
    }
    public void setWeight(float weight) {
       this.weight = weight;
+   }
+   public int getQuantity() {
+      return quantity;
+   }
+   public void setQuantity(int quantity) {
+      this.quantity = quantity;
    }
    public LocalDateTime getEntryDateTime() {
       return entryDateTime;
