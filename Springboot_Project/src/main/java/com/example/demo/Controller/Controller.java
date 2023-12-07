@@ -37,7 +37,7 @@ public class Controller {
 
    @PostMapping("/save")
    public String save(@Validated Product p,Model model){
-      service.save(p);
+      service.save(p);  // save() uses isNew() to check if entity's id's registered; if it is, calls em.merge(), otherwise it calls em.persist()
       return "redirect:/";
    }
 

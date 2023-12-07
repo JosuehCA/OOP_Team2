@@ -97,6 +97,7 @@
                                     <th>Id</th>
                                     <th>RFID</th>
                                     <th>Name</th>
+                                    <th>Quantity</th>
                                     <th>Weight</th>
                                     <th>Entry Date</th>
                                     <th>Exit Date</th>
@@ -108,6 +109,7 @@
                                     <td th:text="${producto.id}"> </td>
                                     <td th:text="${producto.RFID}"></td>
                                     <td th:text="${producto.name}"></td>
+                                    <td th:text="${producto.quantity}"></td>
                                     <td th:text="${producto.weight}"></td>
                                     <td th:text="${#temporals.format(producto.entryDateTime, 'dd-MM-yyyy HH:mm')}"></td>
                                     <td th:text="${#temporals.format(producto.exitDateTime, 'dd-MM-yyyy HH:mm')}"></td>

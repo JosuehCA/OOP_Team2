@@ -18,17 +18,19 @@ public class Product {
    private long id;
    @Column(name = "RFID")
    @GeneratedValue(strategy = GenerationType.AUTO)
-   private long RFID;
+   private String RFID;
    @Column(name = "name")
    private String name;
    @Column(name = "weight")
    private float weight;
+   @Column(name = "Quantity")
+   @GeneratedValue(strategy = GenerationType.AUTO)
+   private int quantity;
    @Column(name= "entry_date")
-   @CreationTimestamp
+   @CreationTimestamp      // Sets the field value to the current timestamp when the entity is first saved
    @DateTimeFormat(pattern = "dd-MM-yyyy HH:mm")
    private LocalDateTime entryDateTime;
    @Column(name= "exit_date")
-   @UpdateTimestamp
    @DateTimeFormat(pattern = "dd-MM-yyyy HH:mm")
    private LocalDateTime exitDateTime;
 
@@ -38,10 +40,10 @@ public class Product {
    public void setId(long id) {
       this.id = id;
    }
-   public long getRFID() {
+   public String getRFID() {
       return RFID;
    }
-   public void setRFID(long RFID) {
+   public void setRFID(String RFID) {
       this.RFID = RFID;
    }
    public String getName() {
@@ -56,6 +58,12 @@ public class Product {
    public void setWeight(float weight) {
       this.weight = weight;
    }
+   public int getQuantity() {
+      return quantity;
+   }
+   public void setQuantity(int quantity) {
+      this.quantity = quantity;
+   }
    public LocalDateTime getEntryDateTime() {
       return entryDateTime;
    }
@@ -63,7 +71,7 @@ public class Product {
       this.entryDateTime = entryDateTime;
    }
    public void setExitDateTime(LocalDateTime exitDateTime) {
-      this.exitDateTime = LocalDateTime.now();
+      this.exitDateTime = exitDateTime;
    }
    public LocalDateTime getExitDateTime() {
       return exitDateTime;
