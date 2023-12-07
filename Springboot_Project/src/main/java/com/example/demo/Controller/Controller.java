@@ -53,4 +53,17 @@ public class Controller {
       service.delete(id);
       return "redirect:/";
    }
+
+   @GetMapping("/read")    // "Lectura Masiva" nav-link redirects to this function
+   public String read(Model model) {
+      List<Product>productos=service.listar();
+      model.addAttribute("products", productos);
+      return "read";
+   }
+
+   @PostMapping("/read")
+   public String read_add(Model model) {
+
+      return "redirect:/read";
+   }
 }
