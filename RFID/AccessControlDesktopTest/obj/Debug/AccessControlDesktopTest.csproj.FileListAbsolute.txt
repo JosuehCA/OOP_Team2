@@ -1,2 +1,0 @@
-C:\Users\usuario\OneDrive\Escritorio\AccessControlDesktopTest\obj\Debug\AccessControlDesktopTest.csproj.AssemblyReference.cache
-C:\Users\usuario\OneDrive\Escritorio\AccessControlDesktopTest\obj\Debug\AccessControlDesktopTest.csproj.CoreCompileInputs.cache
