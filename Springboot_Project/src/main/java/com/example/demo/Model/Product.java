@@ -16,9 +16,6 @@ public class Product {
    @Id
    @GeneratedValue(strategy = GenerationType.IDENTITY)
    private long id;
-   @Column(name = "RFID")
-   @GeneratedValue(strategy = GenerationType.AUTO)
-   private String RFID;
    @Column(name = "name")
    private String name;
    @Column(name = "weight")
@@ -34,18 +31,24 @@ public class Product {
    @DateTimeFormat(pattern = "dd-MM-yyyy HH:mm")
    private LocalDateTime exitDateTime;
 
+   @OneToOne(cascade = CascadeType.ALL)
+   @JoinColumn(name = "rfid", referencedColumnName = "id")
+   private RFID rfid;
+
    public long getId() {
       return id;
    }
    public void setId(long id) {
       this.id = id;
    }
-   public String getRFID() {
-      return RFID;
+
+   public RFID getRfid() {
+      return rfid;
    }
-   public void setRFID(String RFID) {
-      this.RFID = RFID;
+   public void setRfid(RFID rfid) {
+      this.rfid = rfid;
    }
+
    public String getName() {
       return name;
    }
@@ -76,4 +79,5 @@ public class Product {
    public LocalDateTime getExitDateTime() {
       return exitDateTime;
    }
+
 }

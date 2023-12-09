@@ -26,7 +26,7 @@
       <tbody>
       <tr th:each="producto:${products}">
          <td th:text="${producto.id}"> </td>
-         <td th:text="${producto.RFID}"></td>
+         <td th:text="${producto.rfid.rfidValue}"></td>
          <td th:text="${producto.name}"></td>
          <td th:text="${producto.quantity}"></td>
          <td th:text="${producto.weight}"></td>
