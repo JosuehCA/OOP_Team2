@@ -15,7 +15,8 @@
       <tr>
          <th>Id</th>
          <th>RFID</th>
-         <th>Name</th>
+         <th>Client</th>
+         <th>Name of Product</th>
          <th>Quantity</th>
          <th>Weight</th>
          <th>Entry Date</th>
@@ -27,14 +28,15 @@
       <tr th:each="producto:${products}">
          <td th:text="${producto.id}"> </td>
          <td th:text="${producto.rfid.rfidValue}"></td>
+         <td th:text="${producto.client}"> </td>
          <td th:text="${producto.name}"></td>
          <td th:text="${producto.quantity}"></td>
          <td th:text="${producto.weight}"></td>
          <td th:text="${#temporals.format(producto.entryDateTime, 'dd-MM-yyyy HH:mm')}"></td>
          <td th:text="${#temporals.format(producto.exitDateTime, 'dd-MM-yyyy HH:mm')}"></td>
          <td>
-            <a th:href="@{/editar/}+${producto.id}" class="btn btn-warning">Editar</a>
-            <a th:href="@{/eliminar/}+${producto.id}" class="btn btn-danger">Eliminar</a>
+            <a th:href="@{/editar/}+${producto.id}" class="btn btn-warning">Edit</a>
+            <a th:href="@{/eliminar/}+${producto.id}" class="btn btn-danger">Delete</a>
          </td>
       </tr>
       </tbody>

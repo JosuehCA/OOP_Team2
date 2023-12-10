@@ -23,6 +23,10 @@ public class Product {
    @Column(name = "Quantity")
    @GeneratedValue(strategy = GenerationType.AUTO)
    private int quantity;
+
+   @Column(name = "Client")
+   private String client;
+
    @Column(name= "entry_date")
    @CreationTimestamp      // Sets the field value to the current timestamp when the entity is first saved
    @DateTimeFormat(pattern = "dd-MM-yyyy HH:mm")
@@ -66,6 +70,13 @@ public class Product {
    }
    public void setQuantity(int quantity) {
       this.quantity = quantity;
+   }
+
+   public String getClient() {
+      return client;
+   }
+   public void setClient(String client) {
+      this.client = client;
    }
    public LocalDateTime getEntryDateTime() {
       return entryDateTime;

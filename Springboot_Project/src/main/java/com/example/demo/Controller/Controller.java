@@ -53,7 +53,7 @@ public class Controller {
    }
 
    @GetMapping("/lectura")
-   public String procesarCodigo(@ModelAttribute("RFID") RFID rfidValue, Model model) {
+   public String processingCode(@ModelAttribute("RFID") RFID rfidValue, Model model) {
       String code = rfidValue.getRfidValue();
       String message;
 
