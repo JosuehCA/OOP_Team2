@@ -46,8 +46,6 @@ As a reminder, our primary goals included:
 - **Achieve time and cost savings.**
 - **Improving decision-making for perishable products.**
   
-Now, let's explore how the Proof of Concept aligns with these objectives.
-
 ## ***(Product Demonstration)***
 
 **[Demonstrate the automated input and output system, emphasizing real-time tracking, efficient management, and the user-friendly interface.]**
