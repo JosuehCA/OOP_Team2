@@ -16,21 +16,24 @@ public class Product {
    @Id
    @GeneratedValue(strategy = GenerationType.IDENTITY)
    private long id;
-   @Column(name = "RFID")
-   @GeneratedValue(strategy = GenerationType.AUTO)
-   private long RFID;
    @Column(name = "name")
    private String name;
    @Column(name = "weight")
    private float weight;
+   @Column(name = "Quantity")
+   @GeneratedValue(strategy = GenerationType.AUTO)
+   private int quantity;
    @Column(name= "entry_date")
-   @CreationTimestamp
+   @CreationTimestamp      // Sets the field value to the current timestamp when the entity is first saved
    @DateTimeFormat(pattern = "dd-MM-yyyy HH:mm")
    private LocalDateTime entryDateTime;
    @Column(name= "exit_date")
-   @UpdateTimestamp
    @DateTimeFormat(pattern = "dd-MM-yyyy HH:mm")
    private LocalDateTime exitDateTime;
+
+   @OneToOne(cascade = CascadeType.ALL)
+   @JoinColumn(name = "rfid", referencedColumnName = "id")
+   private RFID rfid;
 
    public long getId() {
       return id;
@@ -38,12 +41,14 @@ public class Product {
    public void setId(long id) {
       this.id = id;
    }
-   public long getRFID() {
-      return RFID;
+
+   public RFID getRfid() {
+      return rfid;
    }
-   public void setRFID(long RFID) {
-      this.RFID = RFID;
+   public void setRfid(RFID rfid) {
+      this.rfid = rfid;
    }
+
    public String getName() {
       return name;
    }
@@ -56,6 +61,12 @@ public class Product {
    public void setWeight(float weight) {
       this.weight = weight;
    }
+   public int getQuantity() {
+      return quantity;
+   }
+   public void setQuantity(int quantity) {
+      this.quantity = quantity;
+   }
    public LocalDateTime getEntryDateTime() {
       return entryDateTime;
    }
@@ -63,9 +74,10 @@ public class Product {
       this.entryDateTime = entryDateTime;
    }
    public void setExitDateTime(LocalDateTime exitDateTime) {
-      this.exitDateTime = LocalDateTime.now();
+      this.exitDateTime = exitDateTime;
    }
    public LocalDateTime getExitDateTime() {
       return exitDateTime;
    }
+
 }
