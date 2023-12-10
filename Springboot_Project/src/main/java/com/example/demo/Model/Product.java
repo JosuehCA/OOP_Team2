@@ -1,12 +1,9 @@
 package com.example.demo.Model;
 
 import jakarta.persistence.*;
-import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.UpdateTimestamp;
 import org.springframework.format.annotation.DateTimeFormat;
 
-import java.time.Instant;
 import java.time.LocalDateTime;
 
 @Entity
@@ -15,7 +12,7 @@ import java.time.LocalDateTime;
 public class Product {
    @Id
    @GeneratedValue(strategy = GenerationType.IDENTITY)
-   private long id;
+   private int id;
    @Column(name = "name")
    private String name;
    @Column(name = "weight")
@@ -39,10 +36,10 @@ public class Product {
    @JoinColumn(name = "rfid", referencedColumnName = "id")
    private RFID rfid;
 
-   public long getId() {
+   public int getId() {
       return id;
    }
-   public void setId(long id) {
+   public void setId(int id) {
       this.id = id;
    }
 

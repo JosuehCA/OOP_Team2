@@ -39,11 +39,34 @@ public class Controller {
       return "redirect:/";
    }
 
+   @GetMapping("/actualizar/{id}")
+   public String actualizar(@PathVariable int id, Model model) {
+      Optional<Product> producto = service.listarID(id);
+
+      if (producto.isPresent()) {
+         model.addAttribute("Products", producto.get());
+         return "update-form";
+      } else {
+         return "redirect:/error";
+      }
+   }
+
+   @PostMapping("/actualizar")
+   public String actualizar(@ModelAttribute("product") Product product) {
+      int respuesta = service.update(product);
+
+      if (respuesta == 1) {
+         return "redirect:/";
+      } else {
+         return "redirect:/error";
+      }
+   }
+
    @GetMapping("/editar/{id}")
    public String editar(@PathVariable int id, Model model){
       Optional<Product>producto=service.listarID(id);
       model.addAttribute("Products", producto);
-      return "form";
+      return "redirect:/actualizar/" + id;
    }
 
    @GetMapping("/eliminar/{id}")
@@ -56,22 +79,13 @@ public class Controller {
    public String processingCode(@ModelAttribute("RFID") RFID rfidValue, Model model) {
       String code = rfidValue.getRfidValue();
       String message;
+      Product product = service.processRFIDCode(code);
 
-      if (code != null && !code.isEmpty()) {
-         Optional<Product> optionalProduct = service.findByRfid_RfidValue(code);
-
-         if (optionalProduct.isPresent()) {
-            Product product = optionalProduct.get();
-            product.setQuantity(product.getQuantity() + 1);
-            service.save(product);
-
-            model.addAttribute("Product", product);
-            message = "Successful reading. Product found.";
-         } else {
-            message = "Error: Product not found.";
-         }
+      if (product != null) {
+         model.addAttribute("Product", product);
+         message = "Successful reading. Product found.";
       } else {
-         message = "Error: RFID code is empty or null.";
+         message = "Error: Product not found or RFID code is empty or null.";
       }
 
       List<Product> products = service.listar();

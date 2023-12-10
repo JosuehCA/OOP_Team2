@@ -12,4 +12,8 @@ public interface ProductInterface {
    public void delete(int id);
 
    Optional<Product> findByRfid_RfidValue(String rfid);
+
+   Product processRFIDCode(String code);
+
+   int update(Product product);
 }

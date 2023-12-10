@@ -28,10 +28,30 @@ public class ProductService implements ProductInterface {
 
    @Override
    public int save(Product p) {
-      int respuesta=0;
-      Product product=dato.save(p);
-      if(!product. equals(null)){
-         respuesta=1;
+      int respuesta = 0;
+      Product product = dato.save(p);
+      if (!product.equals(null)){
+         respuesta = 1;
+      }
+      return respuesta;
+   }
+
+   public int update(Product p) {
+      int respuesta = 0;
+
+      Optional<Product> existingProduct = dato.findById(p.getId());
+
+      if (existingProduct.isPresent()) {
+         Product product = existingProduct.get();
+         product.setClient(p.getClient());
+         product.setName(p.getName());
+         product.setQuantity(p.getQuantity());
+         product.setWeight(p.getWeight());
+         product.setRfid(p.getRfid());
+         product.setExitDateTime(p.getExitDateTime());
+
+         dato.save(product);
+         respuesta = 1;
       }
       return respuesta;
    }
@@ -44,5 +64,19 @@ public class ProductService implements ProductInterface {
    @Override
    public Optional<Product> findByRfid_RfidValue(String rfid) {
       return dato.findByRfid_RfidValue(rfid);
+   }
+
+   public Product processRFIDCode(String code) {
+      if (code != null && !code.isEmpty()) {
+         Optional<Product> optionalProduct = dato.findByRfid_RfidValue(code);
+
+         if (optionalProduct.isPresent()) {
+            Product product = optionalProduct.get();
+            product.setQuantity(product.getQuantity() + 1);
+            save(product);
+            return product;
+         }
+      }
+      return null;
    }
 }
