@@ -41,5 +41,8 @@ public class ProductService implements ProductInterface {
       dato.deleteById(id);
    }
 
-
+   @Override
+   public Optional<Product> findByRfid_RfidValue(String rfid) {
+      return dato.findByRfid_RfidValue(rfid);
+   }
 }

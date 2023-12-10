@@ -10,4 +10,6 @@ public interface ProductInterface {
    public Optional<Product>listarID(int id);
    public int save(Product p);
    public void delete(int id);
+
+   Optional<Product> findByRfid_RfidValue(String rfid);
 }

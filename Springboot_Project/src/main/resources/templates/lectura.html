@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lectura RFID</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 20px;
+        }
+
+        h2 {
+            color: #000000;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        p {
+            color: #333;
+            font-weight: bold;
+        }
+
+        h3 {
+            color: #333;
+            margin-top: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #052e5b;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .btn-editar {
+            padding: 5px 10px;
+            margin-right: 5px;
+            border: 1px solid #ffc107;
+            background-color: #ffc107;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .btn-eliminar {
+            padding: 5px 10px;
+            margin-right: 5px;
+            border: 1px solid #1e1f22;
+            background-color: #db3545;
+            color: #e4eaea;
+            text-decoration: none;
+        }
+
+        .btn-editar:hover {
+            background-color: #fdc007;
+        }
+
+        .btn-eliminar:hover {
+            background-color: #db3545;
+        }
+
+        .footer {
+            text-align: right;
+            margin-top: 20px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            background-color: #f8f9fa;
+        }
+    </style>
+</head>
+<body>
+
+<h2>RFID Code Processing</h2>
+
+<!-- Formulario para ingresar el código RFID -->
+<form th:action="@{/lectura}" th:object="${RFID}" method="get">
+    <label for="rfidValue">RFID Code:</label>
+    <input type="text" id="rfidValue" name="rfidValue" th:field="*{rfidValue}" required>
+    <button type="submit">Submit</button>
+</form>
+
+<!-- Mensaje de resultado -->
+<p th:text="${message}"></p>
+
+<!-- Lista de productos -->
+<h3>Product List</h3>
+<table>
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>RFID</th>
+        <th>Name</th>
+        <th>Quantity</th>
+        <th>Weight</th>
+        <th>Entry Date</th>
+        <th>Exit Date</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="product : ${products}" th:if="${product != null}">
+        <td th:text="${product.id}"></td>
+        <td th:text="${product.rfid.rfidValue}"></td>
+        <td th:text="${product.name}"></td>
+        <td th:text="${product.quantity}"></td>
+        <td th:text="${product.weight}"></td>
+        <td th:text="${#temporals.format(product.entryDateTime, 'dd-MM-yyyy HH:mm')}"></td>
+        <td th:text="${#temporals.format(product.exitDateTime, 'dd-MM-yyyy HH:mm')}"></td>
+        <td>
+            <a th:href="@{/editar/}+${product.id}" class="btn-editar">Editar</a>
+            <a th:href="@{/eliminar/}+${product.id}" class="btn-eliminar">Eliminar</a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<!-- Botón para volver al menú principal -->
+<div class="footer">
+    <a style="font-family: sans-serif; font-size: 20px; font-weight: bold; text-decoration: none; color: black" th:href="@{/}">Go back to main page</a>
+</div>
+
+<footer class="py-4 bg-light mt-auto">
+    <div class="container-fluid px-4">
+        <div class="d-flex align-items-center justify-content-between small">
+            <div class="text-muted">Copyright &copy; SeafoodTrace 2023</div>
+            <div>
+                <a href="#">Privacy Policy</a>
+                &middot;
+                <a href="#">Terms &amp; Conditions</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
