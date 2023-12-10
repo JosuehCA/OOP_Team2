@@ -37,7 +37,15 @@ The user will have a section where they will be automatically notified if a mari
 **[Reminder of project objectives.]**
 
 Before we proceed with the demonstration of our POC, it's essential to understand the objectives we set out to achieve with this project.
-Our primary goals included optimizing inventory management, minimizing product losses, enhancing traceability, and improving decision-making for perishable products. Now, let's explore how the Proof of Concept aligns with these objectives.
+
+As a reminder, our primary goals included:
+- **Optimizing inventory management**
+- **Ensure precise control.**
+- **Minimizing product losses.**
+- **Enhancing traceability.** 
+- **Achieve time and cost savings.**
+- **Improving decision-making for perishable products.** 
+Now, let's explore how the Proof of Concept aligns with these objectives.
 
 ## ***(Product Demonstration)***
 
