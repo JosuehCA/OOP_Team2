@@ -80,6 +80,9 @@
             </nav>
         </div>
         <div id="layoutSidenav_content">
+            <div class="alert alert-danger" th:if="${alert != null}">
+                <label th:text="${alert}"></label>
+            </div>
             <main>
                 <div class="container-fluid px-4">
                     <h1 class="mt-4">Dashboard</h1>

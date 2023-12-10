@@ -1,5 +1,8 @@
 package com.example.demo.Service;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.List;
 import java.util.Optional;
 
@@ -12,7 +15,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class ProductService implements ProductInterface {
-   
+
    @Autowired
    private ProductsRepository dato;
 
@@ -28,10 +31,10 @@ public class ProductService implements ProductInterface {
 
    @Override
    public int save(Product p) {
-      int respuesta=0;
-      Product product=dato.save(p);
-      if(!product. equals(null)){
-         respuesta=1;
+      int respuesta = 0;
+      Product product = dato.save(p);
+      if (!product.equals(null)) {
+         respuesta = 1;
       }
       return respuesta;
    }
@@ -44,5 +47,9 @@ public class ProductService implements ProductInterface {
    @Override
    public Optional<Product> findByRfid_RfidValue(String rfid) {
       return dato.findByRfid_RfidValue(rfid);
+   }
+
+   public List<Product> findProductsByExitDateTimeBetween() {
+      return dato.findProductsByExitDateTimeBetween(LocalDateTime.now(), LocalDateTime.now().plusDays(3));
    }
 }

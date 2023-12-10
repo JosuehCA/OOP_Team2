@@ -8,6 +8,7 @@ import com.example.demo.Model.Product;
 
 
 import com.example.demo.Model.RFID;
+import com.example.demo.Service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
 import org.springframework.validation.annotation.Validated;
@@ -18,12 +19,16 @@ import org.springframework.web.bind.annotation.*;
 public class Controller {
    
    @Autowired
-   private ProductInterface service;
+   private ProductService service;
 
    @GetMapping("/")
    public String listar(Model model){
       List<Product>productos=service.listar();
       model.addAttribute("products", productos);
+      List<Product> expireProducts = service.findProductsByExitDateTimeBetween();
+      if(!expireProducts.isEmpty()){
+         model.addAttribute("alert", "You have products close to expiration");
+      }
       return "home";
    }
 
