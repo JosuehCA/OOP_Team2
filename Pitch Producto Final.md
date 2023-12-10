@@ -44,7 +44,8 @@ As a reminder, our primary goals included:
 - **Minimizing product losses.**
 - **Enhancing traceability.** 
 - **Achieve time and cost savings.**
-- **Improving decision-making for perishable products.** 
+- **Improving decision-making for perishable products.**
+  
 Now, let's explore how the Proof of Concept aligns with these objectives.
 
 ## ***(Product Demonstration)***
