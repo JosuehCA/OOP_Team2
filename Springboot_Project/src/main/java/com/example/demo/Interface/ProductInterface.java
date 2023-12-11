@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Optional;
 
 import com.example.demo.Model.Product;
+import org.apache.tomcat.util.http.fileupload.ByteArrayOutputStream;
 
 public interface ProductInterface {
    public List<Product>listar();
@@ -16,4 +17,6 @@ public interface ProductInterface {
    Product processRFIDCode(String code);
 
    int update(Product product);
+   
+   byte[] generatePdfAsByteArray();
 }
