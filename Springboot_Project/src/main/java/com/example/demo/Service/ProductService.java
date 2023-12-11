@@ -2,6 +2,7 @@ package com.example.demo.Service;
 
 import java.io.IOException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.List;
 import java.util.Optional;
@@ -44,6 +45,9 @@ public class ProductService implements ProductInterface {
          respuesta = 1;
       }
       return respuesta;
+   }
+   public List<Product> findProductsByExitDateTimeBetween() {
+      return dato.findProductsByExitDateTimeBetween(LocalDateTime.now(), LocalDateTime.now().plusDays(3));
    }
 
    public int update(Product p) {

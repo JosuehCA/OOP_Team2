@@ -17,6 +17,9 @@ public interface ProductInterface {
    Product processRFIDCode(String code);
 
    int update(Product product);
-   
+
    byte[] generatePdfAsByteArray();
+
+
+   List<Product> findProductsByExitDateTimeBetween();
 }

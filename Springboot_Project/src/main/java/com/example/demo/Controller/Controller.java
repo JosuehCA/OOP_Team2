@@ -30,9 +30,13 @@ public class Controller {
    private ProductInterface service;
 
    @GetMapping("/")
-   public String listar(Model model) {
-      List<Product> productos = service.listar();
+   public String listar(Model model){
+      List<Product>productos=service.listar();
       model.addAttribute("products", productos);
+      List<Product> expireProducts = service.findProductsByExitDateTimeBetween();
+      if(!expireProducts.isEmpty()){
+         model.addAttribute("alert", "You have products close to expiration");
+      }
       return "home";
    }
 
