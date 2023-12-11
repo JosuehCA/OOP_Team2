@@ -67,8 +67,7 @@ As we progressed to the second delivery, substantial modifications shaped the pr
 
 ### *Final Delivery:*
 
-Let's rewind to the inception of our project, where we laid down the essential groundwork. We meticulously defined every aspect surrounding our product, including its description, objectives, scope, and value proposition. Furthermore, we pinned down both functional and non-functional requirements, presenting an initial version of class and use case diagrams. Accompanied by a video pitch detailing our project vision, we introduced an automated input and output system to manage perishable product inventory in a processing plant. This system incorporated RFID technology for precise monitoring within the database."
-
+The final delivery marked a substantial coding effort for the MVC. We transitioned to coding the project in Java, opting for the SpringBoot framework for the web UI. The defined program requirements were flawlessly implemented, and RFID technology was successfully integrated. The result? A fully functional software product automatically recording entries and exits in a robust database.
 
 ## ***(Product Demonstration)***
 
@@ -91,7 +90,7 @@ Imagine taking this POC to the next level and transforming it into a system that
 
 *(Display the user interface of our system, highlighting its user-friendly design and intuitive features.)*
 
-Let's take a quick look at our user interface – the face of our system. Designed with simplicity in mind, our interface is user-friendly and packed with intuitive features. We've built it using SpreenBoot, ensuring a seamless and visually appealing experience for our users. From easy navigation to clear functionalities, our interface is crafted to make the user experience smooth and enjoyable.
+Let's take a quick look at our user interface – the face of our system. Designed with simplicity in mind, our interface is user-friendly and packed with intuitive features. We've built it using SpringBoot, ensuring a seamless and visually appealing experience for our users. From easy navigation to clear functionalities, our interface is crafted to make the user experience smooth and enjoyable.
 
 ### **RFID Technology in Action:**
 
@@ -106,7 +105,7 @@ Now I'll put this RFID ID card in and we'll see what happens.
 
 *(Demonstrate the seamless integration with a centralized database)*
 
-Let's talk about one crucial aspect: database integration. Overall, our database, powered by the SpreenBoot framework, is seamlessly managed through a repository. This means that our system stores and retrieves data efficiently, ensuring a smooth and reliable flow of information. Currently, there are two tables to run SeafodTrace, one table dedicated to products, and another table linking an RFID identifier to each product.
+Let's talk about one crucial aspect: database integration. Overall, our database, powered by the SpringBoot framework, is seamlessly managed through a repository. This means that our system stores and retrieves data efficiently, ensuring a smooth and reliable flow of information. Currently, there are two tables to run SeafodTrace, one table dedicated to products, and another table linking an RFID identifier to each product.
 
 ## ***(Closing)***
 
