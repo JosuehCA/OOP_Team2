@@ -41,11 +41,22 @@ public class ProductService implements ProductInterface {
    public int save(Product p) {
       int respuesta = 0;
       Product product = dato.save(p);
-      if (!product.equals(null)){
+      if (!product.equals(null) && areAllAttributesFilled(product)){
          respuesta = 1;
       }
       return respuesta;
    }
+
+   public boolean areAllAttributesFilled(Product product) {
+      return product != null &&
+              product.getName() != null && !product.getName().isEmpty() &&
+              product.getClient() != null && !product.getClient().isEmpty() &&
+              product.getRfid().getRfidValue() != null && !product.getRfid().getRfidValue().isEmpty() &&
+              product.getExitDateTime() != null &&
+              product.getQuantity() != 0 && !String.valueOf(product.getQuantity()).isEmpty() &&
+              product.getWeight() != 0 && !String.valueOf(product.getWeight()).isEmpty() ;
+   }
+
    public List<Product> findProductsByExitDateTimeBetween() {
       return dato.findProductsByExitDateTimeBetween(LocalDateTime.now(), LocalDateTime.now().plusDays(3));
    }
@@ -53,22 +64,25 @@ public class ProductService implements ProductInterface {
    public int update(Product p) {
       int respuesta = 0;
 
-      Optional<Product> existingProduct = dato.findById(p.getId());
+      if (areAllAttributesFilled(p)) {
+         Optional<Product> existingProduct = dato.findById(p.getId());
 
-      if (existingProduct.isPresent()) {
-         Product product = existingProduct.get();
-         product.setClient(p.getClient());
-         product.setName(p.getName());
-         product.setQuantity(p.getQuantity());
-         product.setWeight(p.getWeight());
-         product.setRfid(p.getRfid());
-         product.setExitDateTime(p.getExitDateTime());
+         if (existingProduct.isPresent()) {
+            Product product = existingProduct.get();
+            product.setClient(p.getClient());
+            product.setName(p.getName());
+            product.setQuantity(p.getQuantity());
+            product.setWeight(p.getWeight());
+            product.setRfid(p.getRfid());
+            product.setExitDateTime(p.getExitDateTime());
 
-         dato.save(product);
-         respuesta = 1;
+            dato.save(product);
+            respuesta = 1;
+         }
       }
       return respuesta;
    }
+
 
    @Override
    public void delete(int id) {
@@ -149,7 +163,5 @@ public class ProductService implements ProductInterface {
          throw new RuntimeException("Error generating PDF", e);
       }
    }
-
-
 
 }

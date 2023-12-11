@@ -22,4 +22,6 @@ public interface ProductInterface {
 
 
    List<Product> findProductsByExitDateTimeBetween();
+
+   boolean areAllAttributesFilled(Product p);
 }

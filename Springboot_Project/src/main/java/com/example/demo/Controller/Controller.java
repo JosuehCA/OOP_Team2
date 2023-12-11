@@ -48,7 +48,14 @@ public class Controller {
 
    @PostMapping("/save")
    public String save(@Validated Product p, Model model) {
-      service.save(p);  // save() uses isNew() to check if entity's id's registered; if it is, calls em.merge(), otherwise it calls em.persist()
+
+      if (!service.areAllAttributesFilled(p)) {
+         model.addAttribute("Error", "All attributes must be filled");
+         model.addAttribute("Products", new Product());
+         return "form";
+
+      }
+      service.save(p);
       return "redirect:/";
    }
 
@@ -65,13 +72,15 @@ public class Controller {
    }
 
    @PostMapping("/actualizar")
-   public String actualizar(@ModelAttribute("product") Product product) {
+   public String actualizar(@ModelAttribute("product") Product product, Model model) {
       int respuesta = service.update(product);
 
       if (respuesta == 1) {
          return "redirect:/";
       } else {
-         return "redirect:/error";
+         model.addAttribute("Error", "All attributes must be filled");
+         model.addAttribute("Products", product);
+         return "update-form";
       }
    }
 

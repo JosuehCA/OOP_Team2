@@ -10,6 +10,9 @@
 <body>
    <div class="col-sm-6">
       <form th:action="@{/save}" th:object="${Products}" method="POST">
+         <div class="alert alert-danger" th:if="${Error != null}">
+            <label th:text="${Error}"></label>
+         </div>
          <div class="card">
             <div class="card-header">
                <h3>Add a product</h3>
