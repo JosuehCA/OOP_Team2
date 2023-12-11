@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}">
 <head>
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +10,7 @@
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 <body>
+<div layout:fragment="content">
    <div class="col-sm-6">
       <form th:action="@{/save}" th:object="${Products}" method="POST">
          <div class="alert alert-danger" th:if="${Error != null}">
@@ -19,11 +22,11 @@
             </div>
             <div class="card-body">
                <div class="form-group">
-                  <label>Client</label>
+                  <label>Name</label>
                   <input th:field="*{client}" type="text" class="form-control">
                </div>
                <div class="form-group">
-                  <label>Name of Product</label>
+                  <label>Name</label>
                   <input th:field="*{name}" type="text" class="form-control">
                </div>
                <div class="form-group">
@@ -52,5 +55,6 @@
          </div>
       </form>
    </div>
+</div>
 </body>
 </html>
