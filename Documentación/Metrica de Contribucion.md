@@ -2,13 +2,12 @@
 
 | **Integrante** | **Actividad** | **Puntaje** | **Total de participación** |
 |:---:|:---:|:---:|:---:|
-| Josueh Cabrera | Grabación de presentaciones<br>Definición de modelos/clases dentro del código<br>Funciones de login,logout, añadir y eliminar productos dentro del controlador | 1<br>1<br>3 | 25% |
-| Johan Aguilar | Definición del Diagrama de Clases<br>Elaboración de la presentación del pitch<br>Actualización de documentación | 2<br>2<br>1 | 25% |
-| Deco Acierno | Definición de Requisitos Funcionales<br>Definición de Requisitos No Funcionales<br>Definición de competencias genéricas | 2<br>2<br>1 | 25% |
-| Ricardo Cordova | Redacción de la bitácora de actividades<br>Definición del Diagrama de Casos de Uso<br>Definición de competencias específicas | 2<br>2<br>1 | 25% |
+| Josueh Cabrera | Grabación de presentaciones<br>Definición de modelos/clases dentro del código (python)<br>Funciones de login,logout, añadir y eliminar dentro del controlador (python)<br>Implementación RFID<br>Gestión de repos remotos/Git<br>Script de lectura masiva continuo | 1<br>1<br>1<br>2<br>2<br>1 | 25% |
+| Johan Aguilar | Definición del Diagrama de Clases<br>Elaboración de presentación pitch 1<br>Actualización de documentación<br>Implementación de lectura masiva<br>Implementación de generador pdf | 1<br>1<br>1<br>3<br>2 | 25% |
+| Deco Acierno | Definición de Requisitos Funcionales<br>Definición de Requisitos No Funcionales<br>Definición de competencias genéricas<br>Elaboración de la tercera presentación<br>Definición de evolución del producto<br>Redacción Pitch tercera entrega | 2<br>2<br>1<br>1<br>1<br>1 | 25% |
+| Ricardo Cordova | Redacción de la bitácora de actividades<br>Definición del Diagrama de Casos de Uso<br>Definición de competencias específicas<br>Elaboración de esqueleto en SpringBoot<br>Implementación front-end | 1<br>2<br>1<br>3<br>1 | 25% |
 
 
-### Las evidencias se encuentran en los commits de cada branch
 #### Cada integrante se dispuso a completar sus tasks dentro de su branch, para luego hacer pull request
 #### Puede hacer click en los nombres para acceder a los commits correspondientes
 
