@@ -34,15 +34,18 @@ The heart of our system lies in providing precise inventory control. It optimize
 
 The user will have a section where they will be automatically notified if a marine product is about to expire. This feature is not just a part of our software; it's one of the key things that make our system incredibly helpful. It ensures that you're always in the loop, making timely decisions to keep your seafood products fresh and of the highest quality. It's like having a friendly reminder right when you need it the most.
 
-4. **Cost and time savings:**
-
-Last but not least, by automating traditionally manual processes, our system brings substantial time and cost savings. Increased efficiency goes beyond immediate operation, it means having more time to solve other tasks.
-
 **[Reminder of project objectives.]**
 
 Before we proceed with the demonstration of our POC, it's essential to understand the objectives we set out to achieve with this project.
-Our primary goals included optimizing inventory management, minimizing product losses, enhancing traceability, and improving decision-making for perishable products. Now, let's explore how the Proof of Concept aligns with these objectives.
 
+As a reminder, our primary goals included:
+- **Optimizing inventory management**
+- **Ensure precise control.**
+- **Minimizing product losses.**
+- **Enhancing traceability.** 
+- **Achieve time and cost savings.**
+- **Improving decision-making for perishable products.**
+  
 ## ***(Product Demonstration)***
 
 **[Demonstrate the automated input and output system, emphasizing real-time tracking, efficient management, and the user-friendly interface.]**
@@ -52,7 +55,7 @@ Our primary goals included optimizing inventory management, minimizing product l
 
 And now, I'm excited to walk you through a demonstration of our POC in action. Introducing **SeafoodTrace**
 
-- User Interface Overview:
+- **User Interface Overview:**
 
 *(Display the user interface of our system, highlighting its user-friendly design and intuitive features.)*
 
