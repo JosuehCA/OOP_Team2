@@ -1,12 +1,9 @@
 package com.example.demo.Model;
 
 import jakarta.persistence.*;
-import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.UpdateTimestamp;
 import org.springframework.format.annotation.DateTimeFormat;
 
-import java.time.Instant;
 import java.time.LocalDateTime;
 
 @Entity
@@ -15,10 +12,7 @@ import java.time.LocalDateTime;
 public class Product {
    @Id
    @GeneratedValue(strategy = GenerationType.IDENTITY)
-   private long id;
-   @Column(name = "RFID")
-   @GeneratedValue(strategy = GenerationType.AUTO)
-   private String RFID;
+   private int id;
    @Column(name = "name")
    private String name;
    @Column(name = "weight")
@@ -26,6 +20,10 @@ public class Product {
    @Column(name = "Quantity")
    @GeneratedValue(strategy = GenerationType.AUTO)
    private int quantity;
+
+   @Column(name = "Client")
+   private String client;
+
    @Column(name= "entry_date")
    @CreationTimestamp      // Sets the field value to the current timestamp when the entity is first saved
    @DateTimeFormat(pattern = "dd-MM-yyyy HH:mm")
@@ -34,18 +32,24 @@ public class Product {
    @DateTimeFormat(pattern = "dd-MM-yyyy HH:mm")
    private LocalDateTime exitDateTime;
 
-   public long getId() {
+   @OneToOne(cascade = CascadeType.ALL)
+   @JoinColumn(name = "rfid", referencedColumnName = "id")
+   private RFID rfid;
+
+   public int getId() {
       return id;
    }
-   public void setId(long id) {
+   public void setId(int id) {
       this.id = id;
    }
-   public String getRFID() {
-      return RFID;
+
+   public RFID getRfid() {
+      return rfid;
    }
-   public void setRFID(String RFID) {
-      this.RFID = RFID;
+   public void setRfid(RFID rfid) {
+      this.rfid = rfid;
    }
+
    public String getName() {
       return name;
    }
@@ -64,6 +68,13 @@ public class Product {
    public void setQuantity(int quantity) {
       this.quantity = quantity;
    }
+
+   public String getClient() {
+      return client;
+   }
+   public void setClient(String client) {
+      this.client = client;
+   }
    public LocalDateTime getEntryDateTime() {
       return entryDateTime;
    }
@@ -76,4 +87,5 @@ public class Product {
    public LocalDateTime getExitDateTime() {
       return exitDateTime;
    }
+
 }
